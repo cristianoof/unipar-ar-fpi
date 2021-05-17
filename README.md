@@ -1,2 +1,2 @@
-# unipar-ar-fpi
-Projeto Atividade Reflexiva - Gerador de Currículos Online
+# Projeto Gerador de Currículos Online
+Projeto Atividade Reflexiva - Fundamentos de Programação para Internet
