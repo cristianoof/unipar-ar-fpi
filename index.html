@@ -14,7 +14,7 @@
         <main>
             <form action="">
                 <fieldset>
-                    <legend>1. Dados Pessoais</legend>
+                    <legend><h2>1. Dados Pessoais</h2></legend>
                     <label for="nomeCompleto">Nome Completo</label>
                     <input type="text" id="nomeCompleto" value="" placeholder="Digite seu nome..." required>
 
@@ -48,15 +48,102 @@
                         <option value="nao">Não</option>
                     </select>
 
+                    <!--verificar para colocar o cep e buscar o endereço no viacep-->
                     <label for="endereco">Endereço</label>
                     <input type="text" id="endereco" required>
 
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado">
+                        <option value=""></option>
+                        <option value="Paraná">Paraná</option>
+                        <option value="São Paulo">São Paulo</option>
+                    </select>
 
+                    <label for="cidade">Cidade</label>
+                    <select name="cidade" id="cidade">
+                        <option value=""></option>
+                        <option value="">Cascavel</option>
+                        <option value="">Foz do Iguaçu</option>
+                    </select>
+
+                    <label for="telefone">Telefone Principal</label>
+                    <input type="tel" id="telefone" required>
+                    
+                    <label for="telefoneRecado">Telefone Recado</label>
+                    <input type="tel" id="telefoneRecado" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="email@exemplo.com" required>
+
+                    <label for="foto">Adicione sua Foto (Opcional)</label>
+                    <input type="file" id="foto">
                 </fieldset>
-            </form>
+                
+                <fieldset>
+                    <legend><h2>2. Objetivo</h2></legend>
+                    <label for="objetivo">Objetivo</label>
+                    <textarea name="objetivo" id="objetivo" cols="70" rows="8"></textarea>
+                </fieldset>
 
+                <fieldset>
+                    <legend><h2>3. Formação Acadêmica</h2></legend>
+                    <label for="curso">Curso</label>
+                    <input type="text" id="curso" value="" placeholder="Ex Administração" required>
+
+                    <label for="instituicao">Instituição</label>
+                    <input type="text" id="instituicao" value="" placeholder="" required>
+
+                    <label for="conclusao">Ano de Conclusão</label>
+                    <select name="conclusao" id="conclusao">
+                        <option value=""></option>
+                        <option value="">Concluído em</option>
+                        <option value="">Previsão para concluir em</option>
+                    </select>
+
+                    <input type="number" id="ano">
+
+                    <a href="#">+ Adicionar Formação</a>
+                </fieldset>
+
+                <fieldset>
+                    <legend><h2>4. Experiência Profissional</h2></legend>
+                    <label for="empresa">Empresa</label>
+                    <input type="text" id="empresa" value="" placeholder="" required>
+
+                    <label for="entradaEmpresa">Mês / Ano Entrada</label>
+                    <input type="month" id="entradaEmpresa">
+                    <!--Melhorar essa parte para esconder a data de saída caso seja o emprego atual-->
+                    <label for="empregoAtual">Emprego Atual? Sim</label>
+                    <input type="checkbox" id="empregoAtual">
+
+                    <label for="saidaEmpresa">Mês / Ano Saída</label>
+                    <input type="month" id="saidaEmpresa">
+
+                    <label for="cargo">Cargo</label>
+                    <input type="text" id="cargo" value="" placeholder="Ex: Analista Financeiro" required>
+
+                    <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
+                    <textarea name="atividades" id="principaisAtividades" cols="70" rows="8"></textarea>
+
+                    <a href="#">+ Adicionar Experiência</a>
+                </fieldset>
+
+                <fieldset>
+                    <legend><h2>5. Outros Cursos e Habilidades</h2></legend>
+                    <label for="outrosCursos">Descreva aqui outros cursos e habilidades caso possua</label>
+                    <input type="text" id="outrosCursos" value="" placeholder="Ex Curso de Excel, Word, Powerpoit | Curso de Digitação etx..." required>
+
+                    <a href="#">+ Adicionar Formação</a>
+                </fieldset>
+
+                <input type="submit" value="Gerar meu Currículo">
+            </form>
         </main>
 
+        <footer>
+            Colocar as informações do Rodapé
+        </footer>
+        
     </body>
 </html>
 <!--
