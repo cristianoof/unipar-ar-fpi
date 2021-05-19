@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Crie seu Currículo Online</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            
-        </header>
-        <main>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crie seu Currículo Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#"><img id="logo" src="images/logo-branco.png" alt="Logo do gerador de currículos"></a>
+            <div class="titulo-principal">
+                <h1>Gerador de Currículos</h1>
+                <h3>Crie seu Currículo Online agora mesmo, de forma simples e gratuita!</h3>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="conteudo">
+            <p>Conteúdo principal</p>
+            <img src="images/view-celular.jpg" alt="Acesse pelo celular">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+
+        <div class="formulario">
             <form action="">
                 <fieldset>
-                    <legend><h2>1. Dados Pessoais</h2></legend>
+                    <legend>
+                        <h2>1. Dados Pessoais</h2>
+                    </legend>
                     <label for="nomeCompleto">Nome Completo</label>
                     <input type="text" id="nomeCompleto" value="" placeholder="Digite seu nome..." required>
 
@@ -27,7 +63,7 @@
                         <option value="feminino">Feminino</option>
                         <option value="masculino">Masculino</option>
                     </select>
-                    
+
                     <label for="idade">Idade</label>
                     <input type="number" id="idade" value="" required>
 
@@ -68,7 +104,7 @@
 
                     <label for="telefone">Telefone Principal</label>
                     <input type="tel" id="telefone" required>
-                    
+
                     <label for="telefoneRecado">Telefone Recado</label>
                     <input type="tel" id="telefoneRecado" required>
 
@@ -78,15 +114,19 @@
                     <label for="foto">Adicione sua Foto (Opcional)</label>
                     <input type="file" id="foto">
                 </fieldset>
-                
+
                 <fieldset>
-                    <legend><h2>2. Objetivo</h2></legend>
+                    <legend>
+                        <h2>2. Objetivo</h2>
+                    </legend>
                     <label for="objetivo">Objetivo</label>
                     <textarea name="objetivo" id="objetivo" cols="70" rows="8"></textarea>
                 </fieldset>
 
                 <fieldset>
-                    <legend><h2>3. Formação Acadêmica</h2></legend>
+                    <legend>
+                        <h2>3. Formação Acadêmica</h2>
+                    </legend>
                     <label for="curso">Curso</label>
                     <input type="text" id="curso" value="" placeholder="Ex Administração" required>
 
@@ -106,7 +146,9 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend><h2>4. Experiência Profissional</h2></legend>
+                    <legend>
+                        <h2>4. Experiência Profissional</h2>
+                    </legend>
                     <label for="empresa">Empresa</label>
                     <input type="text" id="empresa" value="" placeholder="" required>
 
@@ -129,22 +171,28 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend><h2>5. Outros Cursos e Habilidades</h2></legend>
+                    <legend>
+                        <h2>5. Outros Cursos e Habilidades</h2>
+                    </legend>
                     <label for="outrosCursos">Descreva aqui outros cursos e habilidades caso possua</label>
-                    <input type="text" id="outrosCursos" value="" placeholder="Ex Curso de Excel, Word, Powerpoit | Curso de Digitação etx..." required>
+                    <input type="text" id="outrosCursos" value=""
+                        placeholder="Ex Curso de Excel, Word, Powerpoit | Curso de Digitação etx..." required>
 
                     <a href="#">+ Adicionar Formação</a>
                 </fieldset>
 
                 <input type="submit" value="Gerar meu Currículo">
             </form>
-        </main>
+        </div>
 
-        <footer>
-            Colocar as informações do Rodapé
-        </footer>
-        
-    </body>
+    </main>
+
+    <footer>
+        Colocar as informações do Rodapé
+    </footer>
+
+</body>
+
 </html>
 <!--
 1 dados pessoais
@@ -186,4 +234,5 @@ adicionar +
 (verificar para preview)
 Botão para gerar o currículo (verificar pdf, compartilhar e email)
 
-Rodapé para compartilhar e sugestões feedbacks, dados legais.-->
+Rodapé para compartilhar e sugestões feedbacks, dados legais.
+favicon-->

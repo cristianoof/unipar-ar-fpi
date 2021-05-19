@@ -1,0 +1,57 @@
+/*Limpando formatações predefinidas pelo navegador*/
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/*Estilos da página inicial*/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    height: 200px;
+    background: url("../images/banner.png") no-repeat;
+}
+
+.container {
+	width: 80%;
+    margin: 0 auto;
+}
+
+#logo {
+    width: 90px;
+    padding-top: 2%;
+    padding-left: 2%;
+    position: absolute;
+}
+
+.titulo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+
+}
+.container h1 {
+    font-size: 3em;
+    margin: 3% 0 0 0;
+}
+
+.container h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.conteudo img{
+    width: 35%;
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+.formulario {
+    clear: right;
+}
