@@ -8,7 +8,7 @@ html, body {
 }
 
 /*Estilos da página inicial*/
-body, pre {
+body {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -61,7 +61,15 @@ header {
     border-color: black;
 }
 
-input[type=file] {
+fieldset {
+    background-color: rgba(97, 97, 97, 0.1);
+}
+
+input[type="month"] {
+    height: 15px;
+}
+
+input[type=file], input[type=submit] {
     border: none;
 }
 
@@ -69,34 +77,48 @@ input[type=file] {
     display: inline-flex;
     flex-flow: column wrap;
     width: 99%;
-    margin: 0 5px;
+    margin: 0 0.1em;
 }
 
 .formulario-2-colunas {
     display: inline-flex;
     flex-flow: column wrap;
     width: 49%;
-    margin: 0 5px;
+    margin: 0 0.1em;
 }
 
 .formulario-3-colunas {
     display: inline-flex;
     flex-flow: column wrap;
     width: 32.4%;
-    margin: 0 5px;
+    margin: 0 0.1em;
 }
 
 .formulario-4-colunas {
     display: inline-flex;
     flex-flow: column wrap;
-    width: 24%;
-    margin: 0 5px;
+    width: 24.1%;
+    margin: 0 0.1em;
+}
+
+.botao {
+    background-color: #4682B4;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    height: 3.5em;
+}
+
+.botao:hover {
+    background-color: #3CB371;
+    color: white;
+    cursor: pointer;
 }
 
 footer {
     width: 100%;
     height: 250px;
-    background-color: #B0C4DE;
+    background-color: #b0c4de;
     margin: 20px 0 0;
     text-align: center;
 }
@@ -107,4 +129,39 @@ footer {
 
 .logo-footer {
     width: 8%;
+}
+
+@media screen and (max-width: 1180px) {
+    body {
+        background: red;
+    }
+
+    input[type=number] {
+        width: 70%;
+    }
+
+    select {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        background: rgb(159, 233, 62);
+    }
+
+    .container {
+        width: auto;
+    }
+
+    .formulario-1-coluna, .formulario-2-colunas, .formulario-3-colunas, .formulario-4-colunas  {
+        display: inline-block;
+        /*flex-flow: column wrap;*/
+        width: auto;
+        margin: 0 0.1em;
+    }
+
+    input, select, fieldset, textarea {
+        width: 100%;
+    }
 }

@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Crie seu Currículo Online</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -144,7 +145,7 @@
                     </legend>
                     <div class="formulario-1-coluna">
                         <label for="objetivo">Objetivo</label>
-                        <textarea name="objetivo" id="objetivo" cols="70" rows="8"></textarea>
+                        <textarea name="objetivo" id="objetivo" cols="10" rows="8"></textarea>
                     </div>
                 </fieldset>
 
@@ -213,7 +214,7 @@
 
                     <div class="formulario-1-coluna">
                         <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
-                        <textarea name="atividades" id="principaisAtividades" cols="70" rows="8"></textarea>
+                        <textarea name="atividades" id="principaisAtividades" cols="10" rows="8"></textarea>
                     </div>
 
                     <a href="#">+ Adicionar Experiência</a>
@@ -223,18 +224,19 @@
                     <legend>
                         <h2>5. Outros Cursos e Habilidades</h2>
                     </legend>
-                    <div class="formulario-1-coluna">
+                    <div class="formulario-1-coluna mais-cursos" id="outrosCursos">
                         <label for="outrosCursos">Descreva aqui outros cursos e habilidades caso possua</label>
-                        <input type="text" id="outrosCursos" value="" placeholder="Ex Curso de Excel, Word, Powerpoit  |  Curso de Digitação  |  Curso de Photoshop etc...">
+                        <input class="cursos" id type="text" value="" placeholder="Ex Curso de Excel, Word, Powerpoit  |  Curso de Digitação  |  Curso de Photoshop etc...">
                     </div>
-                    <a href="#">+ Adicionar Curso</a>
+                    <button type="button" onclick="clone3()" >+ Adicionar Curso</button>
                 </fieldset>
 
-                <input type="submit" value="Gerar meu Currículo">
+                <input class="botao" type="submit" value="Gerar meu Currículo">
             </form>
         </div>
     </main>
-
+    <!--<button type="button" onclick="clonar()">teste</button>
+    <p id="teste">Teste clonar</p>-->
     <footer>
         <div class="container">
             <div class="itens-footer">
@@ -242,16 +244,8 @@
             </div>
             <p class="copyright">&copy; Copyright Gerador de Currículos by Cristiano Fernandes</p>
         </div>
-        
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
-<!--
-Endrereço (cep)? #### verificar para consultar com o via cep
-foto (verificar)
-(verificar para preview)
-Botão para gerar o currículo (verificar pdf, compartilhar e email)
-
-Rodapé para compartilhar e sugestões feedbacks, dados legais.
-favicon
--->
