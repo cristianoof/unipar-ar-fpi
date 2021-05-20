@@ -51,66 +51,89 @@
                     <legend>
                         <h2>1. Dados Pessoais</h2>
                     </legend>
-                    <label for="nomeCompleto">Nome Completo</label>
-                    <input type="text" id="nomeCompleto" value="" placeholder="Digite seu nome..." required>
-
-                    <label for="nacionalidade">Nacionalidade</label>
-                    <input type="text" id="nacionalidade" value="Brasileiro" required>
-
-                    <label for="sexo">Sexo</label>
-                    <select name="sexo" id="sexo" required>
-                        <option value=""></option>
-                        <option value="feminino">Feminino</option>
-                        <option value="masculino">Masculino</option>
-                    </select>
-
-                    <label for="idade">Idade</label>
-                    <input type="number" id="idade" value="" required>
-
-                    <label for="estadoCivil">Estado Civil</label>
-                    <select name="estadoCivil" id="estadoCivil" required>
-                        <option value=""></option>
-                        <option value="">Solteiro(a)</option>
-                        <option value="">Casado(a)</option>
-                        <option value="">União Estável</option>
-                        <option value="">Divorciado(a)</option>
-                        <option value="">Viúvo(a)</option>
-                    </select>
-
-                    <label for="filhos">Tem Filho(s)?</label>
-                    <select name="filhos" id="filhos">
-                        <option value=""></option>
-                        <option value="sim">Sim</option>
-                        <option value="nao">Não</option>
-                    </select>
-
+                    <div class="formulario-2-colunas">
+                        <label for="nomeCompleto">Nome Completo</label>
+                        <input type="text" id="nomeCompleto" value="" placeholder="Digite seu nome..." required>
+                    </div>
+                    
+                    <div class="formulario-2-colunas">
+                        <label for="nacionalidade">Nacionalidade</label>
+                        <input type="text" id="nacionalidade" value="Brasileiro" required>
+                    </div>
+                    
+                    <div class="formulario-4-colunas">
+                        <label for="sexo">Sexo</label>
+                        <select name="sexo" id="sexo" required>
+                            <option value=""></option>
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                        </select>
+                    </div>
+                    
+                    <div class="formulario-4-colunas">
+                        <label for="idade">Idade</label>
+                        <input type="number" id="idade" value="" required>
+                    </div>
+                    
+                    <div class="formulario-4-colunas">
+                        <label for="estadoCivil">Estado Civil</label>
+                        <select name="estadoCivil" id="estadoCivil" required>
+                            <option value=""></option>
+                            <option value="">Solteiro(a)</option>
+                            <option value="">Casado(a)</option>
+                            <option value="">União Estável</option>
+                            <option value="">Divorciado(a)</option>
+                            <option value="">Viúvo(a)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="formulario-4-colunas">
+                        <label for="filhos">Tem Filho(s)?</label>
+                        <select name="filhos" id="filhos">
+                            <option value=""></option>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    </div>
+                    
                     <!--verificar para colocar o cep e buscar o endereço no viacep-->
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" required>
+                    <div class="formulario-3-colunas">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" required>
+                    </div>
+                    
+                    <div class="formulario-3-colunas">
+                        <label for="estado">Estado</label>
+                        <select name="estado" id="estado">
+                            <option value=""></option>
+                            <option value="Paraná">Paraná</option>
+                            <option value="São Paulo">São Paulo</option>
+                        </select>
+                    </div>
 
-                    <label for="estado">Estado</label>
-                    <select name="estado" id="estado">
-                        <option value=""></option>
-                        <option value="Paraná">Paraná</option>
-                        <option value="São Paulo">São Paulo</option>
-                    </select>
-
+                    <div class="formulario-3-colunas">
                     <label for="cidade">Cidade</label>
                     <select name="cidade" id="cidade">
                         <option value=""></option>
                         <option value="">Cascavel</option>
                         <option value="">Foz do Iguaçu</option>
                     </select>
+                    </div>
 
-                    <label for="telefone">Telefone Principal</label>
-                    <input type="tel" id="telefone" required>
+                    <div class="formulario-3-colunas">
+                        <label for="telefone">Telefone Principal</label>
+                        <input type="tel" id="telefone" required>
+                    </div>
 
-                    <label for="telefoneRecado">Telefone Recado</label>
-                    <input type="tel" id="telefoneRecado" required>
+                    <div class="formulario-3-colunas">
+                        <label for="telefoneRecado">Telefone Recado</label>
+                        <input type="tel" id="telefoneRecado" required>
+                    </div>
 
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="email@exemplo.com" required>
-
+                    <div class="formulario-3-colunas">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="email@exemplo.com" required>
+                    </div>
                     <label for="foto">Adicione sua Foto (Opcional)</label>
                     <input type="file" id="foto">
                 </fieldset>
@@ -119,53 +142,79 @@
                     <legend>
                         <h2>2. Objetivo</h2>
                     </legend>
-                    <label for="objetivo">Objetivo</label>
-                    <textarea name="objetivo" id="objetivo" cols="70" rows="8"></textarea>
+                    <div class="formulario-1-coluna">
+                        <label for="objetivo">Objetivo</label>
+                        <textarea name="objetivo" id="objetivo" cols="70" rows="8"></textarea>
+                    </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>
                         <h2>3. Formação Acadêmica</h2>
                     </legend>
-                    <label for="curso">Curso</label>
-                    <input type="text" id="curso" value="" placeholder="Ex Administração" required>
+                    <div class="formulario-2-colunas">
+                        <label for="curso">Curso</label>
+                        <input type="text" id="curso" value="" placeholder="Ex Administração" required>
+                    </div>
 
-                    <label for="instituicao">Instituição</label>
-                    <input type="text" id="instituicao" value="" placeholder="" required>
+                    <div class="formulario-2-colunas">
+                        <label for="instituicao">Instituição</label>
+                        <input type="text" id="instituicao" value="" placeholder="" required>
+                    </div>
 
-                    <label for="conclusao">Ano de Conclusão</label>
-                    <select name="conclusao" id="conclusao">
-                        <option value=""></option>
-                        <option value="">Concluído em</option>
-                        <option value="">Previsão para concluir em</option>
-                    </select>
+                    <div class="formulario-2-colunas">
+                        <label for="conclusao">Conclusão | Previsão</label>
+                        <select name="conclusao" id="conclusao">
+                            <option value=""></option>
+                            <option value="">Concluído em</option>
+                            <option value="">Previsão para concluir em</option>
+                        </select>
+                    </div>
 
-                    <input type="number" id="ano">
+                    <div class="formulario-2-colunas">
+                        <label for="conclusao">Ano de Conclusão | Previsão</label>
+                        <input type="number" id="ano">
+                    </div>
 
                     <a href="#">+ Adicionar Formação</a>
+                    <button>+ Adicionar Formação</button>
                 </fieldset>
 
                 <fieldset>
                     <legend>
                         <h2>4. Experiência Profissional</h2>
                     </legend>
-                    <label for="empresa">Empresa</label>
-                    <input type="text" id="empresa" value="" placeholder="" required>
+                    <div class="formulario-2-colunas">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" value="" placeholder="" required>
+                    </div>
 
-                    <label for="entradaEmpresa">Mês / Ano Entrada</label>
-                    <input type="month" id="entradaEmpresa">
+                    <div class="formulario-2-colunas">
+                        <label for="cargo">Cargo</label>
+                        <input type="text" id="cargo" value="" placeholder="Ex: Analista Financeiro" required>
+                    </div>
+                    <div class="formulario-3-colunas">
+                        <label for="entradaEmpresa">Mês / Ano Entrada</label>
+                        <input type="month" id="entradaEmpresa">
+                    </div>
                     <!--Melhorar essa parte para esconder a data de saída caso seja o emprego atual-->
-                    <label for="empregoAtual">Emprego Atual? Sim</label>
-                    <input type="checkbox" id="empregoAtual">
+                    <div class="formulario-3-colunas">
+                        <label for="empregoAtual">É seu Emprego Atual?</label>
+                        <select id="empregoAtual">
+                            <option value="nao">Nâo</option>
+                            <option value="sim">Sim</option>
+                        </select>
+                    </div>
 
-                    <label for="saidaEmpresa">Mês / Ano Saída</label>
-                    <input type="month" id="saidaEmpresa">
+                    <div class="formulario-3-colunas">
+                        <label for="saidaEmpresa">Mês / Ano Saída</label>
+                        <input type="month" id="saidaEmpresa">
+                    </div>
 
-                    <label for="cargo">Cargo</label>
-                    <input type="text" id="cargo" value="" placeholder="Ex: Analista Financeiro" required>
-
-                    <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
-                    <textarea name="atividades" id="principaisAtividades" cols="70" rows="8"></textarea>
+                    <div class="formulario-1-coluna">
+                        <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
+                        <textarea name="atividades" id="principaisAtividades" cols="70" rows="8"></textarea>
+                    </div>
 
                     <a href="#">+ Adicionar Experiência</a>
                 </fieldset>
@@ -174,65 +223,35 @@
                     <legend>
                         <h2>5. Outros Cursos e Habilidades</h2>
                     </legend>
-                    <label for="outrosCursos">Descreva aqui outros cursos e habilidades caso possua</label>
-                    <input type="text" id="outrosCursos" value=""
-                        placeholder="Ex Curso de Excel, Word, Powerpoit | Curso de Digitação etx..." required>
-
-                    <a href="#">+ Adicionar Formação</a>
+                    <div class="formulario-1-coluna">
+                        <label for="outrosCursos">Descreva aqui outros cursos e habilidades caso possua</label>
+                        <input type="text" id="outrosCursos" value="" placeholder="Ex Curso de Excel, Word, Powerpoit  |  Curso de Digitação  |  Curso de Photoshop etc...">
+                    </div>
+                    <a href="#">+ Adicionar Curso</a>
                 </fieldset>
 
                 <input type="submit" value="Gerar meu Currículo">
             </form>
         </div>
-
     </main>
 
     <footer>
-        Colocar as informações do Rodapé
+        <div class="container">
+            <div class="itens-footer">
+                <img class="logo-footer" src="images/logo-preto.png" alt="Logo preto do gerador de currículos">
+            </div>
+            <p class="copyright">&copy; Copyright Gerador de Currículos by Cristiano Fernandes</p>
+        </div>
+        
     </footer>
-
 </body>
-
 </html>
 <!--
-1 dados pessoais
-Nome completo
-nacionalidade (preenchido)
-sexo(lista)
-idade(num)anos
-estado civil(lista) solteiro, cadsado, união estável, divorciado, viúvo
-tem filho(s)? (lista) quantos
 Endrereço (cep)? #### verificar para consultar com o via cep
-Estado
-cidade
-telefone principal(tel)
-telefone recado(tel)
-email (email)
 foto (verificar)
-
-2. Objetivo (textarea)
-
-3. Formação Acadêmica
-Curso
-Instituição
-Ano de Conclusão (concluído e previsão) 
-campo Ano
-adicionar +
-
-4. Experiência Profissional
-Empresa
-Mês/Ano entrada
-Mês/Ano saída (ou atual)
-Cargo:
-Principais atividades deselvolvidas no cargo(textarea)
-adicionar +
-
-5. Outros Cursos e Habilidades
-campo (text)
-adicionar +
-
 (verificar para preview)
 Botão para gerar o currículo (verificar pdf, compartilhar e email)
 
 Rodapé para compartilhar e sugestões feedbacks, dados legais.
-favicon-->
+favicon
+-->
