@@ -50,8 +50,12 @@
             <form action="">
                 <fieldset>
                     <legend>
-                        <h2>1. Dados Pessoais</h2>
+                        <h2>1. Dados Pessoais <button type="button" class="botao-ajuda">Ajuda</button></h2>
                     </legend>
+                    <div class="hide">
+                        <p class="ajuda">Aqui tem ajuda que ficará escondida Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                    </div>
+
                     <div class="formulario-2-colunas">
                         <label for="nomeCompleto">Nome Completo</label>
                         <input type="text" id="nomeCompleto" value="" placeholder="Digite seu nome..." required>
@@ -153,90 +157,97 @@
                     <legend>
                         <h2>3. Formação Acadêmica</h2>
                     </legend>
-                    <div class="formulario-2-colunas">
-                        <label for="curso">Curso</label>
-                        <input type="text" id="curso" value="" placeholder="Ex Administração" required>
+                    <div id="formacao">
+                        <div id="mais-formacao">
+                            <div class="formulario-2-colunas">
+                                <label for="curso">Curso</label>
+                                <input type="text" id="curso" value="" data-form-input="1" placeholder="Ex Administração" required>
+                            </div>
+
+                            <div class="formulario-2-colunas">
+                                <label for="instituicao">Instituição</label>
+                                <input type="text" id="instituicao" value="" data-form-input="2" placeholder="" required>
+                            </div>
+
+                            <div class="formulario-2-colunas">
+                                <label for="conclusao">Conclusão | Previsão</label>
+                                <select name="conclusao" id="conclusao">
+                                    <option value=""></option>
+                                    <option value="">Concluído em</option>
+                                    <option value="">Previsão para concluir em</option>
+                                </select>
+                            </div>
+
+                            <div class="formulario-2-colunas">
+                                <label for="ano">Ano de Conclusão | Previsão</label>
+                                <input type="number" id="ano" data-form-input="3">
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="formulario-2-colunas">
-                        <label for="instituicao">Instituição</label>
-                        <input type="text" id="instituicao" value="" placeholder="" required>
-                    </div>
-
-                    <div class="formulario-2-colunas">
-                        <label for="conclusao">Conclusão | Previsão</label>
-                        <select name="conclusao" id="conclusao">
-                            <option value=""></option>
-                            <option value="">Concluído em</option>
-                            <option value="">Previsão para concluir em</option>
-                        </select>
-                    </div>
-
-                    <div class="formulario-2-colunas">
-                        <label for="conclusao">Ano de Conclusão | Previsão</label>
-                        <input type="number" id="ano">
-                    </div>
-
-                    <a href="#">+ Adicionar Formação</a>
-                    <button>+ Adicionar Formação</button>
+                    <button type="button" onclick="clonar('#mais-formacao', '#formacao')" >+ Adicionar Formação</button>
                 </fieldset>
 
                 <fieldset>
                     <legend>
                         <h2>4. Experiência Profissional</h2>
                     </legend>
-                    <div class="formulario-2-colunas">
-                        <label for="empresa">Empresa</label>
-                        <input type="text" id="empresa" value="" placeholder="" required>
+                    <div id="experiencia">
+                        <div id="mais-experiencia">
+                            <div class="formulario-2-colunas">
+                                <label for="empresa">Empresa</label>
+                                <input type="text" id="empresa" value="" data-form-input="1" placeholder="" required>
+                            </div>
+
+                            <div class="formulario-2-colunas">
+                                <label for="cargo">Cargo</label>
+                                <input type="text" id="cargo" value="" data-form-input="2" placeholder="Ex: Analista Financeiro" required>
+                            </div>
+                            <div class="formulario-3-colunas">
+                                <label for="entradaEmpresa">Mês / Ano Entrada</label>
+                                <input type="month" id="entradaEmpresa" data-form-input="3">
+                            </div>
+                            <!--Melhorar essa parte para esconder a data de saída caso seja o emprego atual-->
+                            <div class="formulario-3-colunas">
+                                <label for="empregoAtual">É seu Emprego Atual?</label>
+                                <select id="empregoAtual">
+                                    <option value="nao">Nâo</option>
+                                    <option value="sim">Sim</option>
+                                </select>
+                            </div>
+
+                            <div class="formulario-3-colunas">
+                                <label for="saidaEmpresa">Mês / Ano Saída</label>
+                                <input type="month" id="saidaEmpresa" data-form-input="4">
+                            </div>
+
+                            <div class="formulario-1-coluna">
+                                <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
+                                <textarea name="atividades" id="principaisAtividades" value="" data-form-input="5" cols="10" rows="8"></textarea>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="formulario-2-colunas">
-                        <label for="cargo">Cargo</label>
-                        <input type="text" id="cargo" value="" placeholder="Ex: Analista Financeiro" required>
-                    </div>
-                    <div class="formulario-3-colunas">
-                        <label for="entradaEmpresa">Mês / Ano Entrada</label>
-                        <input type="month" id="entradaEmpresa">
-                    </div>
-                    <!--Melhorar essa parte para esconder a data de saída caso seja o emprego atual-->
-                    <div class="formulario-3-colunas">
-                        <label for="empregoAtual">É seu Emprego Atual?</label>
-                        <select id="empregoAtual">
-                            <option value="nao">Nâo</option>
-                            <option value="sim">Sim</option>
-                        </select>
-                    </div>
-
-                    <div class="formulario-3-colunas">
-                        <label for="saidaEmpresa">Mês / Ano Saída</label>
-                        <input type="month" id="saidaEmpresa">
-                    </div>
-
-                    <div class="formulario-1-coluna">
-                        <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
-                        <textarea name="atividades" id="principaisAtividades" cols="10" rows="8"></textarea>
-                    </div>
-
-                    <a href="#">+ Adicionar Experiência</a>
+                    <button type="button" onclick="clonar('#mais-experiencia', '#experiencia')" >+ Adicionar Experiência</button>
                 </fieldset>
 
                 <fieldset>
                     <legend>
                         <h2>5. Outros Cursos e Habilidades</h2>
                     </legend>
-                    <div class="formulario-1-coluna mais-cursos" id="outrosCursos">
-                        <label for="outrosCursos">Descreva aqui outros cursos e habilidades caso possua</label>
-                        <input class="cursos" id type="text" value="" placeholder="Ex Curso de Excel, Word, Powerpoit  |  Curso de Digitação  |  Curso de Photoshop etc...">
+                    <div class="formulario-1-coluna" id="outros-cursos">
+                        <label for="mais-cursos">Descreva aqui outros cursos e habilidades caso possua</label>
+                        <input id="mais-cursos" type="text" value="" data-form-input="1" placeholder="Ex Curso de Excel, Word, Powerpoit  |  Curso de Digitação  |  Curso de Photoshop etc...">
                     </div>
-                    <button type="button" onclick="clone3()" >+ Adicionar Curso</button>
+
+                    <button type="button" onclick="clonar('#mais-cursos', '#outros-cursos')" >+ Adicionar Curso</button>
                 </fieldset>
 
                 <input class="botao" type="submit" value="Gerar meu Currículo">
             </form>
         </div>
     </main>
-    <!--<button type="button" onclick="clonar()">teste</button>
-    <p id="teste">Teste clonar</p>-->
+
     <footer>
         <div class="container">
             <div class="itens-footer">

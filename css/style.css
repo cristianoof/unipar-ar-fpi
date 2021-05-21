@@ -101,15 +101,43 @@ input[type=file], input[type=submit] {
     margin: 0 0.1em;
 }
 
+.hide {
+    display: none;
+}
+
+.ajuda {
+    background-color: white;
+    border-radius: 5px;
+}
+
 .botao {
     background-color: #4682B4;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
-    height: 3.5em;
+    height: 3.5rem;
 }
 
 .botao:hover {
+    background-color: #3CB371;
+    color: white;
+    cursor: pointer;
+}
+
+.botao-ajuda {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #4682B4;
+    font-size: .9rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    height: 1.8rem;
+    width: 5rem;
+}
+
+.botao-ajuda:hover {
     background-color: #3CB371;
     color: white;
     cursor: pointer;
@@ -133,7 +161,7 @@ footer {
 
 @media screen and (max-width: 1180px) {
     body {
-        background: red;
+        background: rgb(238, 112, 112);
     }
 
     input[type=number] {
