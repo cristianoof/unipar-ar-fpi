@@ -110,39 +110,54 @@ input[type=file], input[type=submit] {
     border-radius: 5px;
 }
 
-.botao {
-    background-color: #4682B4;
-    font-size: 1rem;
+/* Estilos dos botões */
+.btn-salvar, .btn-ajuda, .btn-adicionar {
     font-weight: bold;
-    color: white;
-    height: 3.5rem;
+    border-radius: 5px;
+    
 }
 
-.botao:hover {
+.btn-salvar, .btn-ajuda {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+}
+
+.btn-salvar:hover, .btn-ajuda:hover {
     background-color: #3CB371;
     color: white;
     cursor: pointer;
 }
+.btn-salvar {
+    font-size: 1rem;
+    height: 3.5rem;
+    width: 18rem;
+}
 
-.botao-ajuda {
+.btn-ajuda {
     margin-left: 10px;
     margin-right: 10px;
-    background-color: #4682B4;
     font-size: .9rem;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
     height: 1.8rem;
     width: 5rem;
 }
 
-.botao-ajuda:hover {
-    background-color: #3CB371;
-    color: white;
+.btn-adicionar {
+    border: solid #000000 1px;
+    color: #000000;
+    font-size: .9rem;
+    height: 1.8rem;
+    width: 12rem;
+    margin-top: 15px;
+}
+
+.btn-adicionar:hover {
+    border: solid #3CB371 2px;
+    color: #3CB371;
     cursor: pointer;
 }
 
+/* Estilos dos footer */
 footer {
     width: 100%;
     height: 250px;

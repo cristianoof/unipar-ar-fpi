@@ -1,6 +1,6 @@
 function clonar(elemento, clonarEm){
-    var elementoOriginal = document.querySelector(elemento);
-    var elementoClone = elementoOriginal.cloneNode(true);
+    const elementoOriginal = document.querySelector(elemento)
+    const elementoClone = elementoOriginal.cloneNode(true)
     
     // Limpa os inputs após clonar
     if(elemento == '#mais-cursos'){
@@ -32,5 +32,34 @@ function clonar(elemento, clonarEm){
     }
 
     // Local pra inserir o elemento na paǵina
-    document.querySelector(clonarEm).appendChild(elementoClone);
+    document.querySelector(clonarEm).appendChild(elementoClone)
 }
+
+function mostraConteudo(evento){
+    const conteudo = document.querySelector(evento)
+
+    if(conteudo.className == 'hide'){
+        conteudo.classList.remove('hide')
+    } else{
+        conteudo.classList.add('hide')
+    }
+}
+
+function empregoAtual() {
+    const classe = document.querySelector('[data-emprego-atual]')
+    const items = document.querySelector('[data-select]')
+    //const items = document.getElementById('empregoAtual')
+    items.addEventListener('change', function(){
+         
+        const emprego = this.value
+        console.log(emprego)
+        console.log(classe.className)
+        if(emprego == 'nao'){
+            classe.classList.remove('hide')
+        } else{
+            classe.classList.add('hide')
+        }
+    })  
+}
+empregoAtual();
+    

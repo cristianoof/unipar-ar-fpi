@@ -1,0 +1,21 @@
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+   font-size: 16pt;
+}
+
+h2 {
+   font-size: 14pt;
+}
+
+p {
+   font-size: 12pt;
+}
+
+img {
+   float: right;
+   margin-left: 50px;
+   width: 35mm;
+}
