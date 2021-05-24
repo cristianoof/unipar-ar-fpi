@@ -60,18 +60,18 @@
                             printing and typesetting industry. Lorem Ipsum has been the</p>
                     </div>
 
-                    <div class="formulario-2-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="nomeCompleto">Nome Completo</label>
                         <input type="text" id="nomeCompleto" name="nomeCompleto" placeholder="Digite seu nome..."
                             required>
                     </div>
 
-                    <div class="formulario-2-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="nacionalidade">Nacionalidade</label>
                         <input type="text" id="nacionalidade" name="nacionalidade" value="Brasileiro" required>
                     </div>
 
-                    <div class="formulario-4-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="sexo">Sexo</label>
                         <select id="sexo" name="sexo" required>
                             <option value=""></option>
@@ -80,54 +80,56 @@
                         </select>
                     </div>
 
-                    <div class="formulario-4-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="idade">Idade</label>
                         <input type="number" id="idade" name="idade" required>
                     </div>
 
-                    <div class="formulario-4-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="estadoCivil">Estado Civil</label>
                         <select id="estadoCivil" name="estadoCivil" required>
                             <option value=""></option>
-                            <option value="">Solteiro(a)</option>
-                            <option value="">Casado(a)</option>
-                            <option value="">União Estável</option>
-                            <option value="">Divorciado(a)</option>
-                            <option value="">Viúvo(a)</option>
+                            <option value="Solteiro(a)">Solteiro(a)</option>
+                            <option value="Casado(a)">Casado(a)</option>
+                            <option value="União Estável">União Estável</option>
+                            <option value="Divorciado(a)">Divorciado(a)</option>
+                            <option value="Viúvo(a)">Viúvo(a)</option>
                         </select>
                     </div>
 
-                    <div class="formulario-4-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="filhos">Tem Filho(s)?</label>
                         <select id="filhos" name="filhos">
                             <option value=""></option>
-                            <option value="sim">Sim</option>
-                            <option value="nao">Não</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
                         </select>
                     </div>
 
-                    <!--verificar para colocar o cep e buscar o endereço no viacep-->
-                    <div class="formulario-3-colunas">
-                        <label for="endereco">Endereço</label>
-                        <input type="text" id="endereco" name="endereco" required>
+                    <div class="formulario-2-colunas">
+                        <label for="cep">CEP (Somente Números)</label>
+                        <input type="number" name="cep" id="cep">
+                    </div>
+                    
+                    <div class="formulario-2-colunas">
+                        <label for="rua">Endereço</label>
+                        <input type="text" name="rua" id="rua" required>
                     </div>
 
                     <div class="formulario-3-colunas">
-                        <label for="estado">Estado</label>
-                        <select id="estado" name="estado">
-                            <option value=""></option>
-                            <option value="Paraná">Paraná</option>
-                            <option value="São Paulo">São Paulo</option>
-                        </select>
+                        <label for="bairro">Bairro</label>
+                        <input type="text" name="bairro" id="bairro" required>
                     </div>
-
+                    
                     <div class="formulario-3-colunas">
                         <label for="cidade">Cidade</label>
-                        <select id="cidade" name="cidade">
-                            <option value=""></option>
-                            <option value="">Cascavel</option>
-                            <option value="">Foz do Iguaçu</option>
+                        <input type="text" name="cidade" id="cidade">
                         </select>
+                    </div>
+
+                    <div class="formulario-3-colunas">
+                        <label for="uf">Estado</label>
+                        <input type="text" name="uf" id="uf">
                     </div>
 
                     <div class="formulario-3-colunas">
@@ -302,7 +304,8 @@
             <p class="copyright">&copy; Copyright Gerador de Currículos by Cristiano Fernandes</p>
         </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 

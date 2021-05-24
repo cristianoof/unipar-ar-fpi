@@ -10,12 +10,13 @@ use Dompdf\Options;
 $options = new Options();
 $options->setChroot(__DIR__);
 
-//var_dump($_POST);
-
 // Instancia do Dompdf
 $dompdf = new Dompdf($options);
-//$dompdf->loadHtml('hello world');
-$dompdf->loadHtmlFile(__DIR__.'/curriculo.html');
+//$dompdf->loadHtmlFile('curriculo.html');
+
+ob_start();
+require __DIR__ . "/curriculo.php";
+$dompdf->loadHtml(ob_get_clean());
 
 // (Optional) Setup the paper size and orientation
 $dompdf->setPaper('A4', '');
@@ -24,6 +25,6 @@ $dompdf->setPaper('A4', '');
 $dompdf->render();
 
 // Output the generated PDF to Browser
-$dompdf->stream();
+$dompdf->stream("meu-curriculo.pdf", ["Attachment" => false]);
 
 //header("Location: curriculo.php");
