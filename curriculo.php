@@ -1,6 +1,14 @@
 <?php
 //var_dump($_POST);
-//$nome = $_POST["nomeCompleto"];
+$dateEntrada = new DateTime($_POST["entradaEmpresa"]);
+$dateEntrada = $dateEntrada->format('m/Y');
+$dateSaida = new DateTime($_POST["saidaEmpresa"]);
+$dateSaida = $dateSaida->format('m/Y');
+
+if($_POST["empregoAtual"] == "sim"){
+  $dateSaida = "Emprego Atual";
+};
+
 
 ?>
 
@@ -22,37 +30,37 @@
     <p>Sexo: <?= $_POST["sexo"]?>, Filhos: <?= $_POST["filhos"]?></p> <!--Sexo (alterar o gênero do estado civil) ou retirar-->
     <p><?= $_POST["rua"]?> - <?= $_POST["bairro"]?></p>
     <p>CEP: <?= $_POST["cep"]?> | <?= $_POST["cidade"]?> - <?= $_POST["uf"]?></p>
-    <p>Telefone: </p>
-    <p>Telefone Recado: (esconder caso não tenha)</p>
-    <p>E-mail: email</p>
+    <p>Telefone: <?= $_POST["telefone"]?></p>
+    <p>Telefone Recado: <?= $_POST["telefoneRecado"]?></p>
+    <p>E-mail: <?= $_POST["email"]?></p>
     Foto
     <hr>
   </div>
 
   <div>
     <h2>Objetivo</h2>
-    <p>Descrição objetivo</p>
+    <p><?= $_POST["objetivo"]?></p>
   </div>
 
   <div>
     <h2>Formação Acadêmica</h2>
-    <p>Curso:</p>
-    <p>Instituição:</p>
-    <p>Concluído em: Ano / Previsão de Conclusão em: Ano</p>
+    <p>Curso: <?= $_POST["cursoFormacao"]?></p>
+    <p>Instituição: <?= $_POST["instituicao"]?></p>
+    <p><?= $_POST["conclusao"]?> <?= $_POST["anoFormacao"]?></p>
     + formação
   </div>
 
   <div>
     <h2>Experiência Profissional</h2>
-    <p>Empresa: | Período / emprego atual</p>
-    <p>Cargo: </p>
-    <p>Principais atividades: </p>
+    <p>Empresa: <?= $_POST["empresa"]?> | Período de: <?= $dateEntrada?> a <?= $dateSaida?></p>
+    <p>Cargo: <?= $_POST["cargo"]?></p>
+    <p>Principais atividades: <?= $_POST["atividades"]?></p>
     + Experiência
   </div>
 
   <div>
     <h2>Outros Cursos e Habilidades</h2>
-    <p>Cursos/ habilidades</p>
+    <p><?= $_POST["maisCursos"]?></p>
     + Cursos
   </div>
 </body>
