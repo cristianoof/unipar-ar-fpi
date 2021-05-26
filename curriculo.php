@@ -1,5 +1,5 @@
 <?php
-//var_dump($_POST);
+// Formatação das datas entrada e saída emprego
 $dateEntrada = new DateTime($_POST["entradaEmpresa"]);
 $dateEntrada = $dateEntrada->format('m/Y');
 $dateSaida = new DateTime($_POST["saidaEmpresa"]);
@@ -9,6 +9,38 @@ if($_POST["empregoAtual"] == "sim"){
   $dateSaida = "Emprego Atual";
 };
 
+// Formatação do CEP
+$cep = substr($_POST["cep"], 0, -3)."-". substr($_POST["cep"], -3);
+
+// Formatação dos Telefones
+if(strlen($_POST["telefone"]) == 11){
+  $fone = "(". substr($_POST["telefone"], 0, -9).") ". substr($_POST["telefone"], 2, -4)."-". substr($_POST["telefone"], -4);// Celular
+}else {
+  $fone = "(". substr($_POST["telefone"], 0, -8).") ". substr($_POST["telefone"], 2, -4)."-". substr($_POST["telefone"], -4);// Fone Fixo
+}
+
+if($_POST["telefoneRecado"] == ""){
+  $foneRecado = "";
+}else {
+  $foneRecado = "<p>Telefone Recado: ". $_POST["telefoneRecado"];
+  if(strlen($_POST["telefoneRecado"]) == 11){
+    $foneRecado = "<p>Telefone Recado: ". "(". substr($_POST["telefoneRecado"], 0, -9).") ". substr($_POST["telefoneRecado"], 2, -4)."-". substr($_POST["telefoneRecado"], -4)."</p>";// Celular
+  }else {
+    $foneRecado = "<p>Telefone Recado: ". "(". substr($_POST["telefoneRecado"], 0, -8).") ". substr($_POST["telefoneRecado"], 2, -4)."-". substr($_POST["telefoneRecado"], -4)."</p>";// Fone Fixo
+  }
+}
+
+/*
+$image_name = 'uploads/teste.jpg';
+     
+// Load image file 
+$image = imagecreatefromjpeg($image_name);  
+  
+// Use imagerotate() function to rotate the image
+$img = imagerotate($image, 180, 0);
+header("Content-Type: image/jpeg");
+$img = LoadJpeg("bogus.image");
+imagejpeg($img); */
 
 ?>
 
@@ -29,9 +61,9 @@ if($_POST["empregoAtual"] == "sim"){
     <p><?= $_POST["estadoCivil"]?>, <?= $_POST["nacionalidade"]?>, <?= $_POST["idade"]?> anos</p>
     <p>Sexo: <?= $_POST["sexo"]?>, Filhos: <?= $_POST["filhos"]?></p> <!--Sexo (alterar o gênero do estado civil) ou retirar-->
     <p><?= $_POST["rua"]?> - <?= $_POST["bairro"]?></p>
-    <p>CEP: <?= $_POST["cep"]?> | <?= $_POST["cidade"]?> - <?= $_POST["uf"]?></p>
-    <p>Telefone: <?= $_POST["telefone"]?></p>
-    <p>Telefone Recado: <?= $_POST["telefoneRecado"]?></p>
+    <p>CEP: <?= $cep?> | <?= $_POST["cidade"]?> - <?= $_POST["uf"]?></p>
+    <p>Telefone: <?= $fone?></p>
+    <?= $foneRecado?>
     <p>E-mail: <?= $_POST["email"]?></p>
     Foto
     <hr>

@@ -1,6 +1,6 @@
 <?php
 // include autoloader
-require_once ('dompdf/autoload.inc.php');
+/*require_once ('dompdf/autoload.inc.php');
 
 // reference the Dompdf namespace
 use Dompdf\Dompdf;
@@ -25,6 +25,6 @@ $dompdf->setPaper('A4', '');
 $dompdf->render();
 
 // Output the generated PDF to Browser
-$dompdf->stream("meu-curriculo.pdf", ["Attachment" => false]);
+$dompdf->stream("meu-curriculo.pdf", ["Attachment" => false]);*/
 
 //header("Location: curriculo.php");
