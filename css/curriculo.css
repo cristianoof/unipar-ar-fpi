@@ -1,32 +1,86 @@
-@page {
-   margin: 70px;
-}
-
 body {
    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+   font-family: 'Poppins', sans-serif;
+   text-align: center;
+   background-color: #b0c4de;
+}
+
+.cabecalho p:first-child {
+   font-size: 2.7rem;
+   font-weight: bold;
+   color: white;
+   padding-top: 20px;
+}
+
+.cabecalho p:nth-child(2n) {
+   font-size: 1.5rem;
+   font-style: italic;
+   color: #696969;
+   margin-top: 15px;
+}
+
+.cabecalho p:nth-child(3n) {
+   font-size: 1.5rem;
+   margin-top: 15px;
+}
+
+.btn-imprimir {
+   font-weight: bold;
+   border-radius: 5px;
+   font-size: 1rem;
+   color: white;
+   background-color: #4682B4;
+   border: none;
+   height: 3.5rem;
+   width: 18rem;
+   margin: 15px;   
+}
+
+.btn-imprimir:hover {
+   background-color: #3CB371;
+   color: white;
+   cursor: pointer;
+}
+
+.container {
    width: 80%;
+   margin: 70px auto;
 }
 
 img {
    float: right;
    margin-left: 50px;
-   width: 35mm;
+   width: 40mm;
    height: auto;
 }
 
 h1 {
    font-size: 16pt;
+   font-weight: bold;
+   margin-bottom: 10px;
 }
 
 h2 {
    font-size: 14pt;
+   font-weight: bold;
+   margin: 20px 0 10px 0;
 }
 
 p {
    font-size: 12pt;
-   margin: 0;
+   margin-bottom: 5px;
 }
 
 hr {
    border: gray 1px solid;
+   margin-top: 30px;
+}
+
+@media print { 
+   .nao-imprime { 
+      display: none; 
+   } 
 }

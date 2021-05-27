@@ -1,12 +1,3 @@
-/*Limpando formatações predefinidas pelo navegador*/
-html, body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-}
-
 /*Estilos da página inicial*/
 body {
     font-family: 'Poppins', sans-serif;
@@ -36,9 +27,15 @@ header {
     color: #ffffff;
 
 }
+
 .container h1 {
     font-size: 3em;
     margin: 3% 0 0 0;
+}
+
+.container h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .container h3 {
@@ -64,6 +61,7 @@ header {
 
 fieldset {
     background-color: rgba(97, 97, 97, 0.1);
+    margin-top: 30px;
 }
 
 input[type="month"] {
@@ -104,6 +102,12 @@ input[type=file], input[type=submit] {
 
 .hide {
     display: none;
+}
+
+.foto-preview {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 300px;
 }
 
 .ajuda {
@@ -159,7 +163,7 @@ input[type=file], input[type=submit] {
     cursor: pointer;
 }
 
-/* Estilos dos footer */
+/* Estilos do footer */
 footer {
     width: 100%;
     height: 250px;

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Crie seu Currículo Online</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
 </head>
@@ -47,7 +48,7 @@
         </div>
 
         <div class="formulario">
-            <form action="curriculo.php" method="POST">
+            <form action="curriculo.php" method="POST" enctype="multipart/form-data">
                 <fieldset>
                     <legend>
                         <h2>1. Dados Pessoais <button type="button" class="btn-ajuda"
@@ -146,8 +147,12 @@
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
                     </div>
-                    <label for="foto">Adicione sua Foto (Opcional)</label>
-                    <input type="file" id="foto">
+
+                    <div class="formulario-2-colunas">
+                        <label for="foto">Adicione sua Foto (Opcional)</label>
+                        <input type="file" name="foto" id="foto" onchange="previewImage()">
+                        <img class="foto-preview" id="foto-preview">
+                    </div>
                 </fieldset>
 
                 <fieldset>
@@ -230,18 +235,18 @@
                         <div id="mais-experiencia">
                             <div class="formulario-2-colunas">
                                 <label for="empresa">Empresa</label>
-                                <input type="text" id="empresa" name="empresa" data-form-input="1" placeholder=""
+                                <input type="text" id="empresa" name="empresa[]" data-form-input="1" placeholder=""
                                     required>
                             </div>
 
                             <div class="formulario-2-colunas">
                                 <label for="cargo">Cargo</label>
-                                <input type="text" id="cargo" name="cargo" data-form-input="2"
+                                <input type="text" id="cargo" name="cargo[]" data-form-input="2"
                                     placeholder="Ex: Analista Financeiro" required>
                             </div>
                             <div class="formulario-3-colunas">
                                 <label for="entradaEmpresa">Mês / Ano Entrada</label>
-                                <input type="month" id="entradaEmpresa" name="entradaEmpresa" data-form-input="3">
+                                <input type="month" id="entradaEmpresa" name="entradaEmpresa[]" data-form-input="3">
                             </div>
                             <!--Melhorar essa parte para esconder a data de saída caso seja o emprego atual-->
                             <div class="formulario-3-colunas">
@@ -254,12 +259,12 @@
 
                             <div class="formulario-3-colunas " data-emprego-atual>
                                 <label for="saidaEmpresa">Mês / Ano Saída</label>
-                                <input type="month" id="saidaEmpresa" name="saidaEmpresa" data-form-input="4">
+                                <input type="month" id="saidaEmpresa" name="saidaEmpresa[]" data-form-input="4">
                             </div>
 
                             <div class="formulario-1-coluna">
                                 <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
-                                <textarea id="principaisAtividades" name="atividades" data-form-input="5" cols="10"
+                                <textarea id="principaisAtividades" name="atividades[]" data-form-input="5" cols="10"
                                     rows="8"></textarea>
                             </div>
                         </div>
@@ -283,7 +288,7 @@
 
                     <div class="formulario-1-coluna" id="outros-cursos">
                         <label for="mais-cursos">Descreva aqui outros cursos e habilidades caso possua</label>
-                        <input type="text" id="mais-cursos" name="maisCursos" data-form-input="1"
+                        <input type="text" id="mais-cursos" name="maisCursos[]" data-form-input="1"
                             placeholder="Ex Curso de Excel, Word, Powerpoit  |  Curso de Digitação  |  Curso de Photoshop etc...">
                     </div>
 
