@@ -6,6 +6,7 @@ body {
 header {
     height: 200px;
     background: url("../images/banner.png") no-repeat;
+    margin-bottom: 20px;
 }
 
 .container {
@@ -25,12 +26,12 @@ header {
     flex-direction: column;
     align-items: center;
     color: #ffffff;
-
 }
 
 .container h1 {
-    font-size: 3em;
-    margin: 3% 0 0 0;
+    font-size: 4rem;
+    margin-top: 30px;
+    padding-bottom: 30px;
 }
 
 .container h2 {
@@ -39,14 +40,19 @@ header {
 }
 
 .container h3 {
-    font-size: 1.2em;
-    margin: 0;
+    font-size: 1.5rem;
 }
 
 .conteudo img{
     width: 35%;
     float: right;
     margin: 0 0 20px 20px;
+}
+
+.conteudo p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 15px;
 }
 
 .formulario input, select, fieldset, textarea {
@@ -64,9 +70,14 @@ fieldset {
     margin-top: 30px;
 }
 
-input[type="month"] {
-    height: 15px;
+.formulario label{
+    font-size: 1.1rem;
+    margin-top: 15px;
 }
+
+/*input[type="month"] {
+    height: 15px;
+}*/
 
 input[type=file], input[type=submit] {
     border: none;
@@ -100,6 +111,13 @@ input[type=file], input[type=submit] {
     margin: 0 0.1em;
 }
 
+.formulario-5-colunas {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 19.4%;
+    margin: 0 0.1em;
+}
+
 .hide {
     display: none;
 }
@@ -111,9 +129,12 @@ input[type=file], input[type=submit] {
 }
 
 .ajuda {
+    font-size: 1rem;
+    line-height: 1.5;
     background-color: white;
     border-radius: 5px;
-    padding: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
 }
 
 /* Estilos dos botões */

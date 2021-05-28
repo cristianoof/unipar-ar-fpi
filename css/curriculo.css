@@ -47,7 +47,7 @@ body {
 
 .container {
    width: 80%;
-   margin: 70px auto;
+   margin: 50px auto;
 }
 
 img {
@@ -71,7 +71,7 @@ h2 {
 
 p {
    font-size: 12pt;
-   margin-bottom: 5px;
+   margin-bottom: 7px;
 }
 
 hr {
@@ -79,8 +79,17 @@ hr {
    margin-top: 30px;
 }
 
+.paragrafo p {
+   margin: 10px 0 15px 0;
+   line-height: 1.5;
+}
+
 @media print { 
    .nao-imprime { 
       display: none; 
-   } 
+   }
+   .container {
+      width: 90%;
+      margin: 45px auto;
+   }
 }

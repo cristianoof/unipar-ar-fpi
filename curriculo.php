@@ -1,14 +1,4 @@
 <?php
-// Formatação das datas entrada e saída emprego
-/*$dateEntrada = new DateTime($_POST["entradaEmpresa[]"]);
-$dateEntrada = $dateEntrada->format('m/Y');
-$dateSaida = new DateTime($_POST["saidaEmpresa"]);
-$dateSaida = $dateSaida->format('m/Y');*/
-
-if($_POST["empregoAtual"] == "sim"){
-  $dateSaida = "Emprego Atual";
-};
-
 // Formatação do CEP
 $cep = substr($_POST["cep"], 0, -3)."-". substr($_POST["cep"], -3);
 
@@ -43,45 +33,20 @@ if($temporario != ""){
   $source = "";
 }
 
-/*$experiencia = array("empresa"=>($_POST["empresa"]), "cargo"=>($_POST["cargo"]));
-
-foreach($experiencia as $key=>$value){
-  
-  $teste = implode(",", $value);
-  echo "<p>$key: $teste</p>";
-  //echo "<p>$teste</p>";
-}*/
-
-//var_dump($experiencia);
-
-/*foreach($_POST["empresa"] as $value){
-  echo "<p>$value</p>";
-}
-
-foreach($_POST["cargo"] as $value){
-  echo "<p>$value</p>";
-}
-
-foreach($_POST["atividades"] as $value){
-  echo "<p>$value</p>";
-}*/
-
-/*$experiencia = array("Empresa: "=>($_POST["empresa"]), "Cargo: "=>($_POST["cargo"]), "Atividades: "=>($_POST["atividades"]));
-
-print "<p>{$experiencia['Empresa: '][0]}</p>";
-print "<p>{$experiencia['Cargo: '][0]}</p>";
-print "<p>{$experiencia['Atividades: '][0]}</p>";
-//print_r($experiencia[0][1]);*/
-
-$empresa = $_POST['empresa'];
-$cargo = $_POST['cargo'];
-$dateEntrada = $_POST["entradaEmpresa"];
-$dateSaida = $_POST["saidaEmpresa"];
-$atividades = $_POST['atividades'];
-
-foreach( $empresa as $key => $n ) {
-  print "<p>Empresa: ".$n."  |  Cargo: ".$cargo[$key]."<br>Período de: ".$dateEntrada[$key]."a ".$dataSaida[$key]."<br>Principais atividades: ".$atividades[$key]."\n </p>";
-}
+// Variáveis formação
+$cursoFormacao = $_POST["cursoFormacao"];
+$instituicao = $_POST["instituicao"];
+$conclusao = $_POST["conclusao"];
+$anoFormacao = $_POST["anoFormacao"];
+// Variáveis experiência
+$empresa = $_POST["empresa"];
+$cargo = $_POST["cargo"];
+$entradaMes = $_POST["entradaMes"];
+$entradaAno = $_POST["entradaAno"];
+$empregoAtual = $_POST["empregoAtual"];
+$saidaMes = $_POST["saidaMes"];
+$saidaAno = $_POST["saidaAno"];
+$atividades = $_POST["atividades"];
 
 ?>
 
@@ -124,19 +89,22 @@ foreach( $empresa as $key => $n ) {
       <p><?= $_POST["objetivo"]?></p>
     </div>
 
-    <div>
+    <div class="paragrafo">
       <h2>Formação Acadêmica</h2>
-      <p>Curso: <?= $_POST["cursoFormacao"]?></p>
-      <p>Instituição: <?= $_POST["instituicao"]?></p>
-      <p><?= $_POST["conclusao"]?> <?= $_POST["anoFormacao"]?></p>
-      + formação
+      <?php
+        foreach( $cursoFormacao as $key => $n ) {
+          echo "<p>Curso: ".$n."<br>Istituição: ".$instituicao[$key]."<br>".$conclusao[$key]." ".$anoFormacao[$key]."</p>";
+        }
+      ?>
     </div>
 
-    <div>
+    <div class="paragrafo">
       <h2>Experiência Profissional</h2>
-      
-      novo ############# novo
       <?php
+        foreach( $empresa as $key => $n ) {
+          echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."/".$entradaAno[$key]."  a  ".$saidaMes[$key].$empregoAtual[$key].$saidaAno[$key].
+          "<br>Principais atividades: ".$atividades[$key]."</p>";
+        }
       ?>
     </div>
 

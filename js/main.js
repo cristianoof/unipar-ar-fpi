@@ -23,12 +23,22 @@ function clonar(elemento, clonarEm){
         const limpa3 = elementoClone.querySelector('[data-form-input="3"]')
         const limpa4 = elementoClone.querySelector('[data-form-input="4"]')
         const limpa5 = elementoClone.querySelector('[data-form-input="5"]')
+        const limpa6 = elementoClone.querySelector('[data-form-input="6"]')
+        const limpa7 = elementoClone.querySelector('[data-form-input="7"]')
 
         limpa.value = ""
         limpa2.value = ""
         limpa3.value = ""
         limpa4.value = ""
         limpa5.value = ""
+        limpa6.value = ""
+        limpa7.value = ""
+
+        // Remove a classe hide emprego atual na clonagem
+        const classe1 = limpa5.parentNode
+        const classe2 = limpa6.parentNode
+        classe1.classList.remove('hide');
+        classe2.classList.remove('hide')
     }
 
     // Local pra inserir o elemento na paǵina
@@ -46,18 +56,21 @@ function mostraConteudo(evento){
 }
 
 function empregoAtual() {
-    const classe = document.querySelector('[data-emprego-atual]')
+    const classe1 = document.querySelector('[data-emprego-atual-1]')
+    const classe2 = document.querySelector('[data-emprego-atual-2]')
     const items = document.querySelector('[data-select]')
-    //const items = document.getElementById('empregoAtual')
+    
     items.addEventListener('change', function(){
-         
         const emprego = this.value
-        console.log(emprego)
-        console.log(classe.className)
+        /*console.log(emprego)
+        console.log(classe1.className)
+        console.log(classe2.className)*/
         if(emprego == 'nao'){
-            classe.classList.remove('hide')
+            classe1.classList.remove('hide');
+            classe2.classList.remove('hide')
         } else{
-            classe.classList.add('hide')
+            classe1.classList.add('hide')
+            classe2.classList.add('hide')
         }
     })  
 }

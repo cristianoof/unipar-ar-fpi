@@ -22,8 +22,8 @@
     </header>
     <main class="container">
         <div class="conteudo">
-            <p>Conteúdo principal</p>
             <img src="images/view-celular.jpg" alt="Acesse pelo celular">
+            <p>Conteúdo principal</p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                 scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
@@ -109,7 +109,7 @@
 
                     <div class="formulario-2-colunas">
                         <label for="cep">CEP (Somente Números)</label>
-                        <input type="number" name="cep" id="cep">
+                        <input type="number" name="cep" id="cep" maxlength="8">
                     </div>
                     
                     <div class="formulario-2-colunas">
@@ -189,19 +189,19 @@
                         <div id="mais-formacao">
                             <div class="formulario-2-colunas">
                                 <label for="curso">Curso</label>
-                                <input type="text" id="curso" name="cursoFormacao" data-form-input="1"
+                                <input type="text" name="cursoFormacao[]" id="curso" data-form-input="1"
                                     placeholder="Ex Administração" required>
                             </div>
 
                             <div class="formulario-2-colunas">
                                 <label for="instituicao">Instituição</label>
-                                <input type="text" id="instituicao" name="instituicao" data-form-input="2"
+                                <input type="text" name="instituicao[]" id="instituicao" data-form-input="2"
                                     placeholder="" required>
                             </div>
 
                             <div class="formulario-2-colunas">
                                 <label for="conclusao">Conclusão | Previsão</label>
-                                <select id="conclusao" name="conclusao">
+                                <select id="conclusao" name="conclusao[]">
                                     <option value=""></option>
                                     <option value="Concluído em:">Concluído em</option>
                                     <option value="Previsao de conclusão:">Previsão para concluir em</option>
@@ -210,7 +210,7 @@
 
                             <div class="formulario-2-colunas">
                                 <label for="ano">Ano de Conclusão | Previsão</label>
-                                <input type="number" id="ano" name="anoFormacao" data-form-input="3">
+                                <input type="number" id="ano" name="anoFormacao[]" data-form-input="3">
                             </div>
                         </div>
                     </div>
@@ -244,12 +244,12 @@
                                 <input type="text" id="cargo" name="cargo[]" data-form-input="2"
                                     placeholder="Ex: Analista Financeiro" required>
                             </div>
-                            <div class="formulario-3-colunas">
+                            <!--<div class="formulario-3-colunas">
                                 <label for="entradaEmpresa">Mês / Ano Entrada</label>
                                 <input type="month" id="entradaEmpresa" name="entradaEmpresa[]" data-form-input="3">
-                            </div>
+                            </div>-->
                             <!--Melhorar essa parte para esconder a data de saída caso seja o emprego atual-->
-                            <div class="formulario-3-colunas">
+                            <!--<div class="formulario-3-colunas">
                                 <label for="empregoAtual">É seu Emprego Atual?</label>
                                 <select id="empregoAtual" name="empregoAtual" data-select>
                                     <option value="nao" selected>Nâo</option>
@@ -260,11 +260,37 @@
                             <div class="formulario-3-colunas " data-emprego-atual>
                                 <label for="saidaEmpresa">Mês / Ano Saída</label>
                                 <input type="month" id="saidaEmpresa" name="saidaEmpresa[]" data-form-input="4">
+                            </div>-->
+
+                            <div class="formulario-5-colunas">
+                                <label for="entradaMes">Mês Entrada</label>
+                                <input type="number" name="entradaMes[]" id="entradaMes" data-form-input="3">
+                            </div>
+                            <div class="formulario-5-colunas">
+                                <label for="entradaAno">Ano Entrada</label>
+                                <input type="number" name="entradaAno[]" id="entradaAno" data-form-input="4">
+                            </div>
+                            
+                            <div class="formulario-5-colunas">
+                                <label for="empregoAtual">É seu Emprego Atual?</label>
+                                <select id="empregoAtual" name="empregoAtual[]" data-select>
+                                    <option value="/" selected>Nâo</option>
+                                    <option value="Emprego Atual">Sim</option>
+                                </select>
+                            </div>
+
+                            <div class="formulario-5-colunas" data-emprego-atual-1>
+                                <label for="saidaMes">Mês Saída</label>
+                                <input type="number" name="saidaMes[]" id="saidaMes" data-form-input="5">
+                            </div>
+                            <div class="formulario-5-colunas" data-emprego-atual-2>
+                                <label for="saidaAno">Ano Saída</label>
+                                <input type="number" name="saidaAno[]" id="saidaAno" data-form-input="6">
                             </div>
 
                             <div class="formulario-1-coluna">
                                 <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
-                                <textarea id="principaisAtividades" name="atividades[]" data-form-input="5" cols="10"
+                                <textarea name="atividades[]" id="principaisAtividades" data-form-input="7" cols="10"
                                     rows="8"></textarea>
                             </div>
                         </div>
