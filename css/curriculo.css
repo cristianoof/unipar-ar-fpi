@@ -16,7 +16,7 @@ body {
 }
 
 .cabecalho p:nth-child(2n) {
-   font-size: 1.5rem;
+   font-size: 1.6rem;
    font-style: italic;
    color: #696969;
    margin-top: 15px;
@@ -53,8 +53,8 @@ body {
 img {
    float: right;
    margin-left: 50px;
-   width: 40mm;
-   height: auto;
+   max-width: 40mm;
+   max-height: 50mm;
 }
 
 h1 {
@@ -76,7 +76,7 @@ p {
 
 hr {
    border: gray 1px solid;
-   margin-top: 30px;
+   margin-top: 40px;
 }
 
 .paragrafo p {

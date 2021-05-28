@@ -32,6 +32,10 @@ if($temporario != ""){
 }else{
   $source = "";
 }
+// Verifica se a extensão do arquivo é algum dos 3 formatos de imagem abaixo
+if(!($extensao == "jpg" OR $extensao == "png" OR $extensao == "jpeg")){
+  $source = "";
+}
 
 // Variáveis formação
 $cursoFormacao = $_POST["cursoFormacao"];
@@ -54,7 +58,8 @@ $atividades = $_POST["atividades"];
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aqui está seu Currículo</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/curriculo.css">

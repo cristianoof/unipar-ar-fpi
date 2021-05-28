@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crie seu Currículo Online</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -61,34 +61,34 @@
                             printing and typesetting industry. Lorem Ipsum has been the</p>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="nomeCompleto">Nome Completo</label>
-                        <input type="text" id="nomeCompleto" name="nomeCompleto" placeholder="Digite seu nome..."
+                        <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Digite seu nome..."
                             required>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="nacionalidade">Nacionalidade</label>
-                        <input type="text" id="nacionalidade" name="nacionalidade" value="Brasileiro" required>
+                        <input type="text" name="nacionalidade" id="nacionalidade" value="Brasileiro" required>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="sexo">Sexo</label>
-                        <select id="sexo" name="sexo" required>
+                        <select name="sexo" id="sexo" required>
                             <option value=""></option>
                             <option value="Feminino">Feminino</option>
                             <option value="Masculino">Masculino</option>
                         </select>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="idade">Idade</label>
-                        <input type="number" id="idade" name="idade" required>
+                        <input type="number" name="idade" id="idade" onkeyup="busca('#idade')" required>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="estadoCivil">Estado Civil</label>
-                        <select id="estadoCivil" name="estadoCivil" required>
+                        <select name="estadoCivil" id="estadoCivil" required>
                             <option value=""></option>
                             <option value="Solteiro(a)">Solteiro(a)</option>
                             <option value="Casado(a)">Casado(a)</option>
@@ -98,9 +98,9 @@
                         </select>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="filhos">Tem Filho(s)?</label>
-                        <select id="filhos" name="filhos">
+                        <select name="filhos" id="filhos" required>
                             <option value=""></option>
                             <option value="Sim">Sim</option>
                             <option value="Não">Não</option>
@@ -109,7 +109,7 @@
 
                     <div class="formulario-2-colunas">
                         <label for="cep">CEP (Somente Números)</label>
-                        <input type="number" name="cep" id="cep" maxlength="8">
+                        <input type="number" name="cep" id="cep">
                     </div>
                     
                     <div class="formulario-2-colunas">
@@ -117,40 +117,40 @@
                         <input type="text" name="rua" id="rua" required>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="bairro">Bairro</label>
                         <input type="text" name="bairro" id="bairro" required>
                     </div>
                     
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="cidade">Cidade</label>
-                        <input type="text" name="cidade" id="cidade">
+                        <input type="text" name="cidade" id="cidade" required>
                         </select>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="uf">Estado</label>
-                        <input type="text" name="uf" id="uf">
+                        <input type="text" name="uf" id="uf" required>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="telefone">Telefone Principal</label>
-                        <input type="tel" id="telefone" name="telefone" placeholder="xx xxxxx xxxx" required>
+                        <input type="tel" name="telefone" id="telefone" placeholder="xx xxxxx xxxx" required>
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="telefoneRecado">Telefone Recado (Opcional)</label>
-                        <input type="tel" id="telefoneRecado" name="telefoneRecado">
+                        <input type="tel" name="telefoneRecado" id="telefoneRecado">
                     </div>
 
-                    <div class="formulario-3-colunas">
+                    <div class="grid-1-coluna grid-3-colunas">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+                        <input type="email" name="email" id="email" placeholder="email@exemplo.com" required>
                     </div>
 
-                    <div class="formulario-2-colunas">
+                    <div class="input-foto">
                         <label for="foto">Adicione sua Foto (Opcional)</label>
-                        <input type="file" name="foto" id="foto" onchange="previewImage()">
+                        <input type="file" name="foto" id="foto" accept='image/*' onchange="previewImage()">
                         <img class="foto-preview" id="foto-preview">
                     </div>
                 </fieldset>
@@ -167,9 +167,9 @@
                             printing and typesetting industry. Lorem Ipsum has been the</p>
                     </div>
 
-                    <div class="formulario-1-coluna">
+                    <div class="grid-1-coluna">
                         <label for="objetivo">Objetivo</label>
-                        <textarea id="objetivo" name="objetivo" cols="10" rows="8"></textarea>
+                        <textarea name="objetivo" id="objetivo" cols="10" rows="8"></textarea>
                     </div>
                 </fieldset>
 
@@ -187,30 +187,30 @@
 
                     <div id="formacao">
                         <div id="mais-formacao">
-                            <div class="formulario-2-colunas">
+                            <div class="grid-1-coluna grid-2-colunas">
                                 <label for="curso">Curso</label>
                                 <input type="text" name="cursoFormacao[]" id="curso" data-form-input="1"
                                     placeholder="Ex Administração" required>
                             </div>
 
-                            <div class="formulario-2-colunas">
+                            <div class="grid-1-coluna grid-2-colunas">
                                 <label for="instituicao">Instituição</label>
                                 <input type="text" name="instituicao[]" id="instituicao" data-form-input="2"
                                     placeholder="" required>
                             </div>
 
-                            <div class="formulario-2-colunas">
+                            <div class="grid-1-coluna grid-2-colunas">
                                 <label for="conclusao">Conclusão | Previsão</label>
-                                <select id="conclusao" name="conclusao[]">
+                                <select name="conclusao[]" id="conclusao" required>
                                     <option value=""></option>
                                     <option value="Concluído em:">Concluído em</option>
                                     <option value="Previsao de conclusão:">Previsão para concluir em</option>
                                 </select>
                             </div>
 
-                            <div class="formulario-2-colunas">
+                            <div class="grid-1-coluna grid-2-colunas">
                                 <label for="ano">Ano de Conclusão | Previsão</label>
-                                <input type="number" id="ano" name="anoFormacao[]" data-form-input="3">
+                                <input type="number" name="anoFormacao[]" id="ano" data-form-input="3" required>
                             </div>
                         </div>
                     </div>
@@ -233,65 +233,50 @@
 
                     <div id="experiencia">
                         <div id="mais-experiencia">
-                            <div class="formulario-2-colunas">
+                            <div class="grid-1-coluna grid-2-colunas">
                                 <label for="empresa">Empresa</label>
-                                <input type="text" id="empresa" name="empresa[]" data-form-input="1" placeholder=""
+                                <input type="text" name="empresa[]" id="empresa" data-form-input="1" placeholder=""
                                     required>
                             </div>
 
-                            <div class="formulario-2-colunas">
+                            <div class="grid-1-coluna grid-2-colunas">
                                 <label for="cargo">Cargo</label>
-                                <input type="text" id="cargo" name="cargo[]" data-form-input="2"
+                                <input type="text" name="cargo[]" id="cargo" data-form-input="2"
                                     placeholder="Ex: Analista Financeiro" required>
                             </div>
-                            <!--<div class="formulario-3-colunas">
-                                <label for="entradaEmpresa">Mês / Ano Entrada</label>
-                                <input type="month" id="entradaEmpresa" name="entradaEmpresa[]" data-form-input="3">
-                            </div>-->
-                            <!--Melhorar essa parte para esconder a data de saída caso seja o emprego atual-->
-                            <!--<div class="formulario-3-colunas">
-                                <label for="empregoAtual">É seu Emprego Atual?</label>
-                                <select id="empregoAtual" name="empregoAtual" data-select>
-                                    <option value="nao" selected>Nâo</option>
-                                    <option value="sim">Sim</option>
-                                </select>
-                            </div>
 
-                            <div class="formulario-3-colunas " data-emprego-atual>
-                                <label for="saidaEmpresa">Mês / Ano Saída</label>
-                                <input type="month" id="saidaEmpresa" name="saidaEmpresa[]" data-form-input="4">
-                            </div>-->
-
-                            <div class="formulario-5-colunas">
+                            <div class="grid-1-coluna grid-3-colunas">
                                 <label for="entradaMes">Mês Entrada</label>
-                                <input type="number" name="entradaMes[]" id="entradaMes" data-form-input="3">
+                                <input type="number" name="entradaMes[]" id="entradaMes" data-form-input="3" required>
                             </div>
-                            <div class="formulario-5-colunas">
+
+                            <div class="grid-1-coluna grid-3-colunas">
                                 <label for="entradaAno">Ano Entrada</label>
-                                <input type="number" name="entradaAno[]" id="entradaAno" data-form-input="4">
+                                <input type="number" name="entradaAno[]" id="entradaAno" data-form-input="4" required>
                             </div>
                             
-                            <div class="formulario-5-colunas">
+                            <div class="grid-1-coluna grid-3-colunas">
                                 <label for="empregoAtual">É seu Emprego Atual?</label>
-                                <select id="empregoAtual" name="empregoAtual[]" data-select>
+                                <select name="empregoAtual[]" id="empregoAtual" data-select>
                                     <option value="/" selected>Nâo</option>
                                     <option value="Emprego Atual">Sim</option>
                                 </select>
                             </div>
 
-                            <div class="formulario-5-colunas" data-emprego-atual-1>
+                            <div class="grid-1-coluna grid-3-colunas" data-emprego-atual-1>
                                 <label for="saidaMes">Mês Saída</label>
                                 <input type="number" name="saidaMes[]" id="saidaMes" data-form-input="5">
                             </div>
-                            <div class="formulario-5-colunas" data-emprego-atual-2>
+
+                            <div class="grid-1-coluna grid-3-colunas" data-emprego-atual-2>
                                 <label for="saidaAno">Ano Saída</label>
                                 <input type="number" name="saidaAno[]" id="saidaAno" data-form-input="6">
                             </div>
 
-                            <div class="formulario-1-coluna">
+                            <div class="grid-1-coluna">
                                 <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
                                 <textarea name="atividades[]" id="principaisAtividades" data-form-input="7" cols="10"
-                                    rows="8"></textarea>
+                                    rows="8" required></textarea>
                             </div>
                         </div>
                     </div>
@@ -314,7 +299,7 @@
 
                     <div class="formulario-1-coluna" id="outros-cursos">
                         <label for="mais-cursos">Descreva aqui outros cursos e habilidades caso possua</label>
-                        <input type="text" id="mais-cursos" name="maisCursos[]" data-form-input="1"
+                        <input type="text" name="maisCursos[]" id="mais-cursos" data-form-input="1"
                             placeholder="Ex Curso de Excel, Word, Powerpoit  |  Curso de Digitação  |  Curso de Photoshop etc...">
                     </div>
 
@@ -338,6 +323,7 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 
 </html>

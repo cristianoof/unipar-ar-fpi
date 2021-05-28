@@ -9,10 +9,19 @@ header {
     margin-bottom: 20px;
 }
 
-.container {
-	width: 80%;
-    margin: 0 auto;
+/* conteiner */
+.container  {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
+    @media (min-width: 1170px) {
+        .container {
+            max-width: 80%;
+            padding: 0;
+        }
+    }
 
 #logo {
     width: 90px;
@@ -50,11 +59,38 @@ header {
 }
 
 .conteudo p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     margin-top: 15px;
 }
 
+/* colunas */
+.grid-1-coluna {
+    display: inline-block;
+    vertical-align: top;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    margin-right: -4px;
+    /**zoom: 1;
+    *display: inline;*/
+}
+    /* duas colonas */
+    @media (min-width: 480px) {
+        .grid-2-colunas {
+            width: 50%;
+        }
+    }
+
+    /* tres colunas */
+    @media (min-width: 730px) {
+        .grid-3-colunas {
+            width: 33.3333%;
+        }
+    }
+
+/* Início estilos Formulário */
 .formulario input, select, fieldset, textarea {
     clear: right;
     padding: 12px 25px;
@@ -111,21 +147,33 @@ input[type=file], input[type=submit] {
     margin: 0 0.1em;
 }
 
-.formulario-5-colunas {
+.formulario-5-colunas-select {
     display: inline-flex;
     flex-flow: column wrap;
-    width: 19.4%;
+    width: 19.2%;
     margin: 0 0.1em;
+}
+
+.formulario-5-colunas-number {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 19%;
+    margin: 10px 0.1em 10px 0.1em;
 }
 
 .hide {
     display: none;
 }
 
-.foto-preview {
+.input-foto {
     display: inline-flex;
     flex-flow: column wrap;
-    width: 300px;
+    align-items: top;
+}
+
+.foto-preview {
+    max-height: 250px;
+    border-radius: 5px;
 }
 
 .ajuda {
@@ -136,6 +184,7 @@ input[type=file], input[type=submit] {
     margin-bottom: 30px;
     padding: 15px;
 }
+/* Fim estilos Formulário */
 
 /* Estilos dos botões */
 .btn-salvar, .btn-ajuda, .btn-adicionar {
@@ -199,39 +248,4 @@ footer {
 
 .logo-footer {
     width: 8%;
-}
-
-@media screen and (max-width: 1180px) {
-    body {
-        background: rgb(238, 112, 112);
-    }
-
-    input[type=number] {
-        width: 70%;
-    }
-
-    select {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 980px) {
-    body {
-        background: rgb(159, 233, 62);
-    }
-
-    .container {
-        width: auto;
-    }
-
-    .formulario-1-coluna, .formulario-2-colunas, .formulario-3-colunas, .formulario-4-colunas  {
-        display: inline-block;
-        /*flex-flow: column wrap;*/
-        width: auto;
-        margin: 0 0.1em;
-    }
-
-    input, select, fieldset, textarea {
-        width: 100%;
-    }
 }

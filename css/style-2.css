@@ -1,0 +1,216 @@
+/*Estilos da página inicial*/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    height: 200px;
+    background: url("../images/banner.png") no-repeat;
+    margin-bottom: 20px;
+}
+
+.container {
+	width: 80%;
+    margin: 0 auto;
+}
+
+#logo {
+    width: 90px;
+    padding-top: 2%;
+    padding-left: 2%;
+    position: absolute;
+}
+
+.titulo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.container h1 {
+    font-size: 4rem;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.container h3 {
+    font-size: 1.5rem;
+}
+
+.conteudo img{
+    width: 35%;
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+.conteudo p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+/* Início estilos Formulário */
+.formulario input, select, fieldset, textarea {
+    clear: right;
+    padding: 12px 25px;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: black;
+    font-size: 1rem;
+}
+
+fieldset {
+    background-color: rgba(97, 97, 97, 0.1);
+    margin-top: 30px;
+}
+
+.formulario label{
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/*input[type="month"] {
+    height: 15px;
+}*/
+
+input[type=file], input[type=submit] {
+    border: none;
+}
+
+.formulario-1-coluna {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 99%;
+    margin: 0 0.1em;
+}
+
+.formulario-2-colunas {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 49%;
+    margin: 0 0.1em;
+}
+
+.formulario-3-colunas {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 32.4%;
+    margin: 0 0.1em;
+}
+
+.formulario-4-colunas {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 24.1%;
+    margin: 0 0.1em;
+}
+
+.formulario-5-colunas-select {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 19.2%;
+    margin: 0 0.1em;
+}
+
+.formulario-5-colunas-number {
+    display: inline-flex;
+    flex-flow: column wrap;
+    width: 19%;
+    margin: 10px 0.1em 10px 0.1em;
+}
+
+.hide {
+    display: none;
+}
+
+.input-foto {
+    display: inline-flex;
+    flex-flow: column wrap;
+    align-items: top;
+}
+
+.foto-preview {
+    max-height: 250px;
+    border-radius: 5px;
+}
+
+.ajuda {
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+/* Fim estilos Formulário */
+
+/* Estilos dos botões */
+.btn-salvar, .btn-ajuda, .btn-adicionar {
+    font-weight: bold;
+    border-radius: 5px;
+    
+}
+
+.btn-salvar, .btn-ajuda {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+}
+
+.btn-salvar:hover, .btn-ajuda:hover {
+    background-color: #3CB371;
+    color: white;
+    cursor: pointer;
+}
+.btn-salvar {
+    font-size: 1rem;
+    height: 3.5rem;
+    width: 18rem;
+}
+
+.btn-ajuda {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: .9rem;
+    height: 1.8rem;
+    width: 5rem;
+}
+
+.btn-adicionar {
+    border: solid #000000 1px;
+    color: #000000;
+    font-size: .9rem;
+    height: 1.8rem;
+    width: 12rem;
+    margin-top: 15px;
+}
+
+.btn-adicionar:hover {
+    border: solid #3CB371 2px;
+    color: #3CB371;
+    cursor: pointer;
+}
+
+/* Estilos do footer */
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: #b0c4de;
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+.itens-footer {
+
+}
+
+.logo-footer {
+    width: 8%;
+}
