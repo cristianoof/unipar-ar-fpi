@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -22,28 +23,24 @@
     </header>
     <main class="container">
         <div class="conteudo">
-            <img src="images/view-celular.jpg" alt="Acesse pelo celular">
-            <p>Conteúdo principal</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
+            <img src="images/view-desktop.jpg" alt="Acesse pelo celular">
+            <p>O Gerador de Currículos Online foi construído para facilitar o processo de criação de um currículo, disponibilizando
+                e formatando as informações de forma adequada na página.
+                Depois de preencher tudo, você poderá clicar no botão <strong>Gerar meu Currículo</strong> para ser direcionado à uma página com o curriculo
+                pronto e disponível para imprimir ou salvar, tudo de forma simples e intuitiva!
             </p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
+            <p>As etapas estão divididas em seções em uma ordem lógica e padrão utilizados na grande maioria dos currículos atualmente. Em cada seção temos
+                um botão de <strong>Ajuda</strong>, ao clicar você verá uma breve orientação de como preencher os campos a seguir. É claro que essa <i>orientação</i>
+                é uma sugestão de como preencher, seguindo os padrões atuais, mas fique a vontade no preenchimento.
             </p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
+            <p>A maioria dos campos são de preenchimento obrigatório, caso esqueça algum para trás, ao clicar no botão para gerar, você será
+                avisado em qual campo está faltando a informação.
+                Vale ressaltar que quanto mais rico em informações conter em seu curriculo, melhor será recebido pelo recrutador. Isso não quer
+                dizer pra encher de informações desencontradas <i>só para fazer volume!</i>
+            </p>
+            <p>Caso você esteja procurando o primeiro emprego, fique tranquilo, há muitas oportunidades de trabalho para seu perfil. Preencha os
+                campos com informações de escolaridade, cursos que tenha feito ou esteja fazendo e principalmente preencha de forma honesta e 
+                detalhada o campo <strong>Objetivo</strong> na seção 2. Sem mais delongas, vamos criar seu currículo!
             </p>
         </div>
 
@@ -55,24 +52,27 @@
                                 onclick="mostraConteudo('[data-ajuda-1]')">Ajuda</button></h2>
                     </legend>
                     <div class="hide" data-ajuda-1>
-                        <p class="ajuda">Aqui tem ajuda 1 que ficará escondida Lorem Ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has been the. Lorem Ipsum is simply dummy
-                            text of the
-                            printing and typesetting industry. Lorem Ipsum has been the</p>
+                        <p class="ajuda">
+                            Preencha todos os campos a seguir, exceto <i>telefone de recado</i> caso não tenha. Para o endereço, Digite
+                            somente os números de seu CEP que o sistema fará a busca do endereço, cidade e estado, faltando informar 
+                            o número da casa.<br>
+                            A Foto é opcional, mas é muito importante que seu currículo tenha uma foto. Procure uma que esteja com um sorriso e com
+                            fundo neutro, quem tem que estar em destaque é você!
+                        </p>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="nomeCompleto">Nome Completo</label>
                         <input type="text" name="nomeCompleto" id="nomeCompleto" placeholder="Digite seu nome..."
                             required>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="nacionalidade">Nacionalidade</label>
                         <input type="text" name="nacionalidade" id="nacionalidade" value="Brasileiro" required>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="sexo">Sexo</label>
                         <select name="sexo" id="sexo" required>
                             <option value=""></option>
@@ -81,12 +81,12 @@
                         </select>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="idade">Idade</label>
                         <input type="number" name="idade" id="idade" onkeyup="busca('#idade')" required>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="estadoCivil">Estado Civil</label>
                         <select name="estadoCivil" id="estadoCivil" required>
                             <option value=""></option>
@@ -98,7 +98,7 @@
                         </select>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="filhos">Tem Filho(s)?</label>
                         <select name="filhos" id="filhos" required>
                             <option value=""></option>
@@ -117,39 +117,39 @@
                         <input type="text" name="rua" id="rua" required>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="bairro">Bairro</label>
                         <input type="text" name="bairro" id="bairro" required>
                     </div>
                     
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="cidade">Cidade</label>
                         <input type="text" name="cidade" id="cidade" required>
                         </select>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="uf">Estado</label>
                         <input type="text" name="uf" id="uf" required>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
-                        <label for="telefone">Telefone Principal</label>
+                    <div class="formulario-3-colunas">
+                        <label for="telefone">Telefone Principal (Somente Números)</label>
                         <input type="tel" name="telefone" id="telefone" placeholder="xx xxxxx xxxx" required>
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="telefoneRecado">Telefone Recado (Opcional)</label>
                         <input type="tel" name="telefoneRecado" id="telefoneRecado">
                     </div>
 
-                    <div class="grid-1-coluna grid-3-colunas">
+                    <div class="formulario-3-colunas">
                         <label for="email">E-mail</label>
                         <input type="email" name="email" id="email" placeholder="email@exemplo.com" required>
                     </div>
 
                     <div class="input-foto">
-                        <label for="foto">Adicione sua Foto (Opcional)</label>
+                        <label for="foto">Adicione sua Foto (Opcional) *Tamanho ideal é quadrado Ex: 500px por 500px</label>
                         <input type="file" name="foto" id="foto" accept='image/*' onchange="previewImage()">
                         <img class="foto-preview" id="foto-preview">
                     </div>
@@ -161,13 +161,13 @@
                                 onclick="mostraConteudo('[data-ajuda-2]')">Ajuda</button></h2>
                     </legend>
                     <div class="hide" data-ajuda-2>
-                        <p class="ajuda">Aqui tem ajuda 2 que ficará escondida Lorem Ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has been the. Lorem Ipsum is simply dummy
-                            text of the
-                            printing and typesetting industry. Lorem Ipsum has been the</p>
+                        <p class="ajuda">
+                            O Objetivo é uma seção importantíssima em seu currículo. Fale um pouco sobre você e sua pretensão, se é primeiro
+                            emprego, mudança de carreira, progressão na mesma carreira, etc. Tudo de forma objetiva e verdadeira.
+                        </p>
                     </div>
 
-                    <div class="grid-1-coluna">
+                    <div class="formulario-1-coluna">
                         <label for="objetivo">Objetivo</label>
                         <textarea name="objetivo" id="objetivo" cols="10" rows="8"></textarea>
                     </div>
@@ -179,27 +179,27 @@
                                 onclick="mostraConteudo('[data-ajuda-3]')">Ajuda</button></h2>
                     </legend>
                     <div class="hide" data-ajuda-3>
-                        <p class="ajuda">Aqui tem ajuda 3 que ficará escondida Lorem Ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has been the. Lorem Ipsum is simply dummy
-                            text of the
-                            printing and typesetting industry. Lorem Ipsum has been the</p>
+                        <p class="ajuda">
+                            Aqui em suas formações, descreva o curo e instituicao de forma completa, evite muitas abreviações.<br>
+                            Caso não possua ou não esteja cursando uma graduação, coloque seu estudo no colégio mesmo, concluído ou cursando.
+                        </p>
                     </div>
 
                     <div id="formacao">
                         <div id="mais-formacao">
-                            <div class="grid-1-coluna grid-2-colunas">
+                            <div class="formulario-2-colunas">
                                 <label for="curso">Curso</label>
                                 <input type="text" name="cursoFormacao[]" id="curso" data-form-input="1"
                                     placeholder="Ex Administração" required>
                             </div>
 
-                            <div class="grid-1-coluna grid-2-colunas">
+                            <div class="formulario-2-colunas">
                                 <label for="instituicao">Instituição</label>
                                 <input type="text" name="instituicao[]" id="instituicao" data-form-input="2"
                                     placeholder="" required>
                             </div>
 
-                            <div class="grid-1-coluna grid-2-colunas">
+                            <div class="formulario-2-colunas">
                                 <label for="conclusao">Conclusão | Previsão</label>
                                 <select name="conclusao[]" id="conclusao" required>
                                     <option value=""></option>
@@ -208,7 +208,7 @@
                                 </select>
                             </div>
 
-                            <div class="grid-1-coluna grid-2-colunas">
+                            <div class="formulario-2-colunas">
                                 <label for="ano">Ano de Conclusão | Previsão</label>
                                 <input type="number" name="anoFormacao[]" id="ano" data-form-input="3" required>
                             </div>
@@ -233,29 +233,29 @@
 
                     <div id="experiencia">
                         <div id="mais-experiencia">
-                            <div class="grid-1-coluna grid-2-colunas">
+                            <div class="formulario-2-colunas">
                                 <label for="empresa">Empresa</label>
                                 <input type="text" name="empresa[]" id="empresa" data-form-input="1" placeholder=""
                                     required>
                             </div>
 
-                            <div class="grid-1-coluna grid-2-colunas">
+                            <div class="formulario-2-colunas">
                                 <label for="cargo">Cargo</label>
                                 <input type="text" name="cargo[]" id="cargo" data-form-input="2"
                                     placeholder="Ex: Analista Financeiro" required>
                             </div>
 
-                            <div class="grid-1-coluna grid-3-colunas">
+                            <div class="formulario-5-colunas-number">
                                 <label for="entradaMes">Mês Entrada</label>
                                 <input type="number" name="entradaMes[]" id="entradaMes" data-form-input="3" required>
                             </div>
 
-                            <div class="grid-1-coluna grid-3-colunas">
+                            <div class="formulario-5-colunas-number">
                                 <label for="entradaAno">Ano Entrada</label>
                                 <input type="number" name="entradaAno[]" id="entradaAno" data-form-input="4" required>
                             </div>
                             
-                            <div class="grid-1-coluna grid-3-colunas">
+                            <div class="formulario-5-colunas-select">
                                 <label for="empregoAtual">É seu Emprego Atual?</label>
                                 <select name="empregoAtual[]" id="empregoAtual" data-select>
                                     <option value="/" selected>Nâo</option>
@@ -263,17 +263,17 @@
                                 </select>
                             </div>
 
-                            <div class="grid-1-coluna grid-3-colunas" data-emprego-atual-1>
+                            <div class="formulario-5-colunas-number" data-emprego-atual-1>
                                 <label for="saidaMes">Mês Saída</label>
                                 <input type="number" name="saidaMes[]" id="saidaMes" data-form-input="5">
                             </div>
 
-                            <div class="grid-1-coluna grid-3-colunas" data-emprego-atual-2>
+                            <div class="formulario-5-colunas-number" data-emprego-atual-2>
                                 <label for="saidaAno">Ano Saída</label>
                                 <input type="number" name="saidaAno[]" id="saidaAno" data-form-input="6">
                             </div>
 
-                            <div class="grid-1-coluna">
+                            <div class="formulario-1-coluna">
                                 <label for="principaisAtividades">Principais Atividades Deselvolvidas no Cargo</label>
                                 <textarea name="atividades[]" id="principaisAtividades" data-form-input="7" cols="10"
                                     rows="8" required></textarea>

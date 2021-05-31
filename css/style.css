@@ -5,23 +5,17 @@ body {
 
 header {
     height: 200px;
-    background: url("../images/banner.png") no-repeat;
+    background: url("../images/banner.jpg") no-repeat;
     margin-bottom: 20px;
 }
 
 /* conteiner */
 .container  {
-    width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
 }
-    @media (min-width: 1170px) {
-        .container {
-            max-width: 80%;
-            padding: 0;
-        }
-    }
 
 #logo {
     width: 90px;
@@ -64,35 +58,21 @@ header {
     margin-top: 15px;
 }
 
-/* colunas */
-.grid-1-coluna {
-    display: inline-block;
-    vertical-align: top;
-    min-height: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 100%;
-    margin-right: -4px;
-    /**zoom: 1;
-    *display: inline;*/
+strong {
+    font-weight: bold;
 }
-    /* duas colonas */
-    @media (min-width: 480px) {
-        .grid-2-colunas {
-            width: 50%;
-        }
-    }
 
-    /* tres colunas */
-    @media (min-width: 730px) {
-        .grid-3-colunas {
-            width: 33.3333%;
-        }
-    }
+i {
+    font-style: italic;
+}
 
 /* Início estilos Formulário */
-.formulario input, select, fieldset, textarea {
+.formulario {
     clear: right;
+    margin-top: 50px;
+}
+
+.formulario input, select, fieldset, textarea {
     padding: 12px 25px;
     margin: 10px 0 10px 0;
     border-radius: 5px;
@@ -110,10 +90,6 @@ fieldset {
     font-size: 1.1rem;
     margin-top: 15px;
 }
-
-/*input[type="month"] {
-    height: 15px;
-}*/
 
 input[type=file], input[type=submit] {
     border: none;
@@ -181,6 +157,7 @@ input[type=file], input[type=submit] {
     line-height: 1.5;
     background-color: white;
     border-radius: 5px;
+    border: solid gray 1px;
     margin-bottom: 30px;
     padding: 15px;
 }
