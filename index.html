@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -29,13 +28,13 @@
                 Depois de preencher tudo, você poderá clicar no botão <strong>Gerar meu Currículo</strong> para ser direcionado à uma página com o curriculo
                 pronto e disponível para imprimir ou salvar, tudo de forma simples e intuitiva!
             </p>
-            <p>As etapas estão divididas em seções em uma ordem lógica e padrão utilizados na grande maioria dos currículos atualmente. Em cada seção temos
+            <p>As etapas estão divididas em seções em ordem de preenchimento padrão que é utilizado na grande maioria dos currículos atualmente. Em cada seção temos
                 um botão de <strong>Ajuda</strong>, ao clicar você verá uma breve orientação de como preencher os campos a seguir. É claro que essa <i>orientação</i>
                 é uma sugestão de como preencher, seguindo os padrões atuais, mas fique a vontade no preenchimento.
             </p>
-            <p>A maioria dos campos são de preenchimento obrigatório, caso esqueça algum para trás, ao clicar no botão para gerar, você será
+            <p>A maioria dos campos são de preenchimento obrigatório, mas caso esqueça algum para trás, ao clicar no botão para gerar, você será
                 avisado em qual campo está faltando a informação.
-                Vale ressaltar que quanto mais rico em informações conter em seu curriculo, melhor será recebido pelo recrutador. Isso não quer
+                Vale ressaltar que quanto mais rico de informações conter em seu curriculo, melhor será recebido pelo recrutador. Isso não quer
                 dizer pra encher de informações desencontradas <i>só para fazer volume!</i>
             </p>
             <p>Caso você esteja procurando o primeiro emprego, fique tranquilo, há muitas oportunidades de trabalho para seu perfil. Preencha os
@@ -57,7 +56,7 @@
                             somente os números de seu CEP que o sistema fará a busca do endereço, cidade e estado, faltando informar 
                             o número da casa.<br>
                             A Foto é opcional, mas é muito importante que seu currículo tenha uma foto. Procure uma que esteja com um sorriso e com
-                            fundo neutro, quem tem que estar em destaque é você!
+                            fundo neutro, quem tem deve estar em destaque é você!
                         </p>
                     </div>
 
@@ -180,8 +179,9 @@
                     </legend>
                     <div class="hide" data-ajuda-3>
                         <p class="ajuda">
-                            Aqui em suas formações, descreva o curo e instituicao de forma completa, evite muitas abreviações.<br>
-                            Caso não possua ou não esteja cursando uma graduação, coloque seu estudo no colégio mesmo, concluído ou cursando.
+                            Aqui em suas formações, descreva o Curso e Instituição de forma completa, evite muitas abreviações.<br>
+                            Caso não possua ou não esteja cursando uma graduação, coloque seu estudo no colégio mesmo, concluído ou cursando.<br>
+                            Ao final dessa seção tem um botão <strong>+ Adicionar Formação</strong>, clique e adicione quantas forem preciso.
                         </p>
                     </div>
 
@@ -190,13 +190,13 @@
                             <div class="formulario-2-colunas">
                                 <label for="curso">Curso</label>
                                 <input type="text" name="cursoFormacao[]" id="curso" data-form-input="1"
-                                    placeholder="Ex Administração" required>
+                                    placeholder="Ex: Bacharel em Administração" required>
                             </div>
 
                             <div class="formulario-2-colunas">
                                 <label for="instituicao">Instituição</label>
                                 <input type="text" name="instituicao[]" id="instituicao" data-form-input="2"
-                                    placeholder="" required>
+                                    placeholder="Ex: Unipar - Universidade Paranaense" required>
                             </div>
 
                             <div class="formulario-2-colunas">
@@ -225,10 +225,12 @@
                                 onclick="mostraConteudo('[data-ajuda-4]')">Ajuda</button></h2>
                     </legend>
                     <div class="hide" data-ajuda-4>
-                        <p class="ajuda">Aqui tem ajuda 4 que ficará escondida Lorem Ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has been the. Lorem Ipsum is simply dummy
-                            text of the
-                            printing and typesetting industry. Lorem Ipsum has been the</p>
+                        <p class="ajuda">
+                            A seção de Experiência Profissional é indispensável em um currículo. Um campo de muita atenção nessa seção é o de <i>Principais Atividades
+                            Desenvolvidas no Cargo</i>. Descreva com detalhes, de forma objetiva e clara, suas atividades no cargo/empresa em questão.<br>
+                            Caso não possua experiêcia profissional, deixe todos os campos dessa seção em branco.<br>
+                            Ao final dessa seção tem um botão <strong>+ Adicionar Experiência</strong>, clique e adicione quantas forem preciso.
+                        </p>
                     </div>
 
                     <div id="experiencia">
@@ -291,16 +293,18 @@
                                 onclick="mostraConteudo('[data-ajuda-5]')">Ajuda</button></h2>
                     </legend>
                     <div class="hide" data-ajuda-5>
-                        <p class="ajuda">Aqui tem ajuda 5 que ficará escondida Lorem Ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has been the. Lorem Ipsum is simply dummy
-                            text of the
-                            printing and typesetting industry. Lorem Ipsum has been the</p>
+                        <p class="ajuda">
+                            Essa seção é destinada para você descrever outros cursos que tenha feito. Exemplos: Curso de Digitação. Tenho facilidade e agilidade em digitar;
+                            Curso de Excel Avançado. Tabalho com fórmulas complexas, tabelas e gráficos dinâmicos, macros, etc.<br>
+                            Para ficar de uma forma mais legível e organizada, informe cada curso e sua breve descrição em um campo. Assim adicione quantos campos precisar. <br>
+                            Ao final dessa seção tem um botão <strong>+ Adicionar Curso</strong>, clique e adicione quantas forem preciso.
+                        </p>
                     </div>
 
                     <div class="formulario-1-coluna" id="outros-cursos">
                         <label for="mais-cursos">Descreva aqui outros cursos e habilidades caso possua</label>
                         <input type="text" name="maisCursos[]" id="mais-cursos" data-form-input="1"
-                            placeholder="Ex Curso de Excel, Word, Powerpoit  |  Curso de Digitação  |  Curso de Photoshop etc...">
+                            placeholder="Ex: Curso de Excel, Word, Powerpoit  |  Curso de Digitação  |  Curso de Photoshop etc...">
                     </div>
 
                     <button type="button" class="btn-adicionar" onclick="clonar('#mais-cursos', '#outros-cursos')">+
@@ -316,8 +320,8 @@
         <div class="container">
             <div class="itens-footer">
                 <img class="logo-footer" src="images/logo-preto.png" alt="Logo preto do gerador de currículos">
+                <p class="copyright">&copy; Copyright Gerador de Currículos by <i>Cristiano Fernandes</i></p>
             </div>
-            <p class="copyright">&copy; Copyright Gerador de Currículos by Cristiano Fernandes</p>
         </div>
     </footer>
 
