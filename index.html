@@ -82,7 +82,7 @@
 
                     <div class="formulario-3-colunas">
                         <label for="idade">Idade</label>
-                        <input type="number" name="idade" id="idade" onkeyup="busca('#idade')" required>
+                        <input type="number" name="idade" id="idade" required>
                     </div>
 
                     <div class="formulario-3-colunas">
@@ -134,7 +134,7 @@
 
                     <div class="formulario-3-colunas">
                         <label for="telefone">Telefone Principal (Somente Números)</label>
-                        <input type="tel" name="telefone" id="telefone" placeholder="xx xxxxx xxxx" required>
+                        <input type="tel" name="telefone" id="telefone" onblur="validaFone()" placeholder="xx xxxxx xxxx" required>
                     </div>
 
                     <div class="formulario-3-colunas">
@@ -150,8 +150,8 @@
                     <div class="input-foto">
                         <label for="foto">Adicione sua Foto (Opcional) *Tamanho ideal é quadrado Ex: 500px por 500px</label>
                         <input type="file" name="foto" id="foto" accept='image/*' onchange="previewImage()">
-                        <img class="foto-preview" id="foto-preview">
                     </div>
+                    <img class="foto-preview" id="foto-preview">
                 </fieldset>
 
                 <fieldset>
@@ -237,27 +237,40 @@
                         <div id="mais-experiencia">
                             <div class="formulario-2-colunas">
                                 <label for="empresa">Empresa</label>
-                                <input type="text" name="empresa[]" id="empresa" data-form-input="1" placeholder=""
-                                    required>
+                                <input type="text" name="empresa[]" id="empresa" data-form-input="1" placeholder="">
                             </div>
 
                             <div class="formulario-2-colunas">
                                 <label for="cargo">Cargo</label>
                                 <input type="text" name="cargo[]" id="cargo" data-form-input="2"
-                                    placeholder="Ex: Analista Financeiro" required>
+                                    placeholder="Ex: Analista Financeiro">
                             </div>
 
-                            <div class="formulario-5-colunas-number">
+                            <div class="formulario-5-colunas">
                                 <label for="entradaMes">Mês Entrada</label>
-                                <input type="number" name="entradaMes[]" id="entradaMes" data-form-input="3" required>
+                                <select name="entradaMes[]" id="entradaMes" data-form-input="3">
+                                    <option value="" selected></option>
+                                    <option value="01">Janeiro</option>
+                                    <option value="02">Fevereiro</option>
+                                    <option value="03">Março</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Maio</option>
+                                    <option value="06">Junho</option>
+                                    <option value="07">Julho</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Setembro</option>
+                                    <option value="10">Outubro</option>
+                                    <option value="11">Novembro</option>
+                                    <option value="12">Dezembro</option>
+                                </select>
                             </div>
 
-                            <div class="formulario-5-colunas-number">
+                            <div class="formulario-5-colunas">
                                 <label for="entradaAno">Ano Entrada</label>
-                                <input type="number" name="entradaAno[]" id="entradaAno" data-form-input="4" required>
+                                <input type="number" name="entradaAno[]" id="entradaAno" data-form-input="4">
                             </div>
                             
-                            <div class="formulario-5-colunas-select">
+                            <div class="formulario-5-colunas">
                                 <label for="empregoAtual">É seu Emprego Atual?</label>
                                 <select name="empregoAtual[]" id="empregoAtual" data-select>
                                     <option value="/" selected>Nâo</option>
@@ -265,12 +278,26 @@
                                 </select>
                             </div>
 
-                            <div class="formulario-5-colunas-number" data-emprego-atual-1>
+                            <div class="formulario-5-colunas" data-emprego-atual-1>
                                 <label for="saidaMes">Mês Saída</label>
-                                <input type="number" name="saidaMes[]" id="saidaMes" data-form-input="5">
+                                <select name="saidaMes[]" id="saidaMes" data-form-input="5">
+                                    <option value="" selected></option>
+                                    <option value="01">Janeiro</option>
+                                    <option value="02">Fevereiro</option>
+                                    <option value="03">Março</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Maio</option>
+                                    <option value="06">Junho</option>
+                                    <option value="07">Julho</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Setembro</option>
+                                    <option value="10">Outubro</option>
+                                    <option value="11">Novembro</option>
+                                    <option value="12">Dezembro</option>
+                                </select>
                             </div>
 
-                            <div class="formulario-5-colunas-number" data-emprego-atual-2>
+                            <div class="formulario-5-colunas" data-emprego-atual-2>
                                 <label for="saidaAno">Ano Saída</label>
                                 <input type="number" name="saidaAno[]" id="saidaAno" data-form-input="6">
                             </div>
@@ -310,7 +337,7 @@
                     <button type="button" class="btn-adicionar" onclick="clonar('#mais-cursos', '#outros-cursos')">+
                         Adicionar Curso</button>
                 </fieldset>
-
+                <button onclick="return confirm('A seção Experiência Profissional está vazia, deseja continuar?')">TESTE</button>
                 <input class="btn-salvar" type="submit" value="Gerar meu Currículo">
             </form>
         </div>
@@ -327,7 +354,6 @@
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/validation.js"></script>
 </body>
 
 </html>

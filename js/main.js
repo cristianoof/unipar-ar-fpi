@@ -33,12 +33,6 @@ function clonar(elemento, clonarEm){
         limpa5.value = ""
         limpa6.value = ""
         limpa7.value = ""
-
-        // Remove a classe hide emprego atual na clonagem
-        const classe1 = limpa5.parentNode
-        const classe2 = limpa6.parentNode
-        classe1.classList.remove('hide');
-        classe2.classList.remove('hide')
     }
 
     // Local pra inserir o elemento na paǵina
@@ -54,27 +48,6 @@ function mostraConteudo(evento){
         conteudo.classList.add('hide')
     }
 }
-
-function empregoAtual() {
-    const classe1 = document.querySelector('[data-emprego-atual-1]')
-    const classe2 = document.querySelector('[data-emprego-atual-2]')
-    const items = document.querySelector('[data-select]')
-    
-    items.addEventListener('change', function(){
-        const emprego = this.value
-        /*console.log(emprego)
-        console.log(classe1.className)
-        console.log(classe2.className)*/
-        if(emprego == 'nao'){
-            classe1.classList.remove('hide');
-            classe2.classList.remove('hide')
-        } else{
-            classe1.classList.add('hide')
-            classe2.classList.add('hide')
-        }
-    })  
-}
-empregoAtual();
 
 // Consulta de CEP no ViaCep com Jquery
 $(document).ready(function() {
@@ -158,5 +131,21 @@ function previewImage(){
         reader.readAsDataURL(image)
     }else{
         preview.src = ""
+    }
+}
+
+// Validar Fone
+function validaFone(){
+    const fone = document.querySelector('#telefone')
+
+    if(fone.value.length > 0 && fone.value.length < 10){
+        alert("Corrija o Telefone Principal: \nDigite o DDD Ex: 45 e mais 9 dígitos para Celular ou \n8 dígitos para Telefone Fixo, tudo sem espaço, parenteses, traços etc")
+        document.getElementById("telefone").focus()
+        fone.value = ""
+    }
+    else if(fone.value.length > 11){
+        alert("Corrija o Telefone Principal: \nDigite o DDD Ex: 45 e mais 9 dígitos para Celular ou \n8 dígitos para Telefone Fixo, tudo sem espaço, parenteses, traços etc")
+        document.getElementById("telefone").focus()
+        fone.value = ""
     }
 }

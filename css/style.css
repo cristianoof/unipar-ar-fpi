@@ -128,17 +128,17 @@ input[type=file], input[type=submit] {
     margin: 0 0.1em;
 }
 
-.formulario-5-colunas-select {
+.formulario-5-colunas {
     display: inline-flex;
     flex-flow: column wrap;
     width: 19.2%;
     margin: 0 0.1em;
 }
 
-.formulario-5-colunas-number {
+.formulario-5-colunas input[type=number] {
     display: inline-flex;
     flex-flow: column wrap;
-    width: 19%;
+    width: 74.5%;
     margin: 10px 0.1em 10px 0.1em;
 }
 
@@ -147,7 +147,7 @@ input[type=file], input[type=submit] {
 }
 
 .input-foto {
-    display: inline-flex;
+    display: flex;
     flex-flow: column wrap;
     align-items: top;
 }
@@ -155,6 +155,7 @@ input[type=file], input[type=submit] {
 .foto-preview {
     max-height: 250px;
     border-radius: 5px;
+    margin-left: 30px;
 }
 
 .ajuda {

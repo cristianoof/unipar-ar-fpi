@@ -3,20 +3,25 @@
 $cep = substr($_POST["cep"], 0, -3)."-". substr($_POST["cep"], -3);
 
 // Formatação dos Telefones
-if(strlen($_POST["telefone"]) == 11){
-  $fone = "(". substr($_POST["telefone"], 0, -9).") ". substr($_POST["telefone"], 2, -4)."-". substr($_POST["telefone"], -4);// Celular
+$remover = array("-", "(", ")", " ", ",", ".", "*");
+$fone = str_replace($remover, "", $_POST["telefone"]);
+
+if(strlen($fone) == 11){
+  $fone = "(". substr($fone, 0, -9).") ". substr($fone, 2, -4)."-". substr($fone, -4);// Celular
 }else {
-  $fone = "(". substr($_POST["telefone"], 0, -8).") ". substr($_POST["telefone"], 2, -4)."-". substr($_POST["telefone"], -4);// Fone Fixo
+  $fone = "(". substr($fone, 0, -8).") ". substr($fone, 2, -4)."-". substr($fone, -4);// Fone Fixo
 }
+
+$foneRecadoCorreto = str_replace($remover, "", $_POST["telefoneRecado"]);
 
 if($_POST["telefoneRecado"] == ""){
   $foneRecado = "";
 }else {
-  $foneRecado = "<p>Telefone Recado: ". $_POST["telefoneRecado"];
-  if(strlen($_POST["telefoneRecado"]) == 11){
-    $foneRecado = "<p>Telefone Recado: ". "(". substr($_POST["telefoneRecado"], 0, -9).") ". substr($_POST["telefoneRecado"], 2, -4)."-". substr($_POST["telefoneRecado"], -4)."</p>";// Celular
+  $foneRecado = "<p>Telefone Recado: ". $foneRecadoCorreto;
+  if(strlen($foneRecadoCorreto) == 11){
+    $foneRecado = "<p>Telefone Recado: ". "(". substr($foneRecadoCorreto, 0, -9).") ". substr($foneRecadoCorreto, 2, -4)."-". substr($foneRecadoCorreto, -4)."</p>";// Celular
   }else {
-    $foneRecado = "<p>Telefone Recado: ". "(". substr($_POST["telefoneRecado"], 0, -8).") ". substr($_POST["telefoneRecado"], 2, -4)."-". substr($_POST["telefoneRecado"], -4)."</p>";// Fone Fixo
+    $foneRecado = "<p>Telefone Recado: ". "(". substr($foneRecadoCorreto, 0, -8).") ". substr($foneRecadoCorreto, 2, -4)."-". substr($foneRecadoCorreto, -4)."</p>";// Fone Fixo
   }
 }
 
