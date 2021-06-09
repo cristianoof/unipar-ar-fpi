@@ -32,7 +32,7 @@ header {
 }
 
 .container h1 {
-    font-size: 4rem;
+    font-size: 3.7rem;
     margin-top: 30px;
     padding-bottom: 30px;
 }
@@ -43,7 +43,7 @@ header {
 }
 
 .container h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .conteudo img{
@@ -92,7 +92,7 @@ legend h2 {
 }
 
 .formulario label{
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-top: 15px;
 }
 
@@ -233,4 +233,25 @@ footer {
     max-width: 95px;
     height: auto;
     margin-bottom: 20px;
+}
+
+@media (min-width: 1400px){
+    .formulario label{
+        font-size: 1.1rem;
+    }
+
+    .formulario-5-colunas input[type=number] {
+        width: 81.5%;
+    }
+
+    .container h1 {
+        font-size: 3.9rem;
+        margin-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .container h3 {
+        font-size: 1.5rem;
+    }
+    
 }

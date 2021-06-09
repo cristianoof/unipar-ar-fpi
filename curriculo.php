@@ -58,7 +58,6 @@ $saidaAno = $_POST["saidaAno"];
 $atividades = $_POST["atividades"];
 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -69,9 +68,7 @@ $atividades = $_POST["atividades"];
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/curriculo.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
   <header class="cabecalho nao-imprime" id="cabecalho-curriculo">
     <p>Tudo pronto! Aqui está seu Currículo!</p>
@@ -85,7 +82,7 @@ $atividades = $_POST["atividades"];
       <img <?=$source?> alt="">
       <h1><?= $_POST["nomeCompleto"]?></h1>
       <p><?= $_POST["estadoCivil"]?>, <?= $_POST["nacionalidade"]?>, <?= $_POST["idade"]?> anos</p>
-      <p>Sexo: <?= $_POST["sexo"]?>, Filhos: <?= $_POST["filhos"]?></p> <!--Sexo (alterar o gênero do estado civil) ou retirar-->
+      <p>Sexo: <?= $_POST["sexo"]?>, Filhos: <?= $_POST["filhos"]?></p>
       <p><?= $_POST["rua"]?> - <?= $_POST["bairro"]?></p>
       <p>CEP: <?= $cep?> | <?= $_POST["cidade"]?> - <?= $_POST["uf"]?></p>
       <p>Telefone: <?= $fone?></p>
@@ -111,9 +108,14 @@ $atividades = $_POST["atividades"];
     <div class="paragrafo">
       <h2>Experiência Profissional</h2>
       <?php
-        foreach( $empresa as $key => $n ) {
-          echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."/".$entradaAno[$key]."  a  ".$saidaMes[$key].$empregoAtual[$key].$saidaAno[$key].
-          "<br>Principais atividades: ".$atividades[$key]."</p>";
+        // Valida se os principais campos da experiência prof. estão preenchidos, caso vazios retorna a msg abaixo, caso contrário retorna os dados
+        if($empresa[0] == "" && $cargo[0] == ""){
+          echo ("<p>Estou a procura do primeiro emprego.</p>");
+        }else {
+          foreach( $empresa as $key => $n ) {
+            echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."/".$entradaAno[$key]."  a  ".$saidaMes[$key].$empregoAtual[$key].$saidaAno[$key].
+            "<br>Principais atividades: ".$atividades[$key]."</p>";
+          }
         }
       ?>
     </div>
@@ -127,7 +129,5 @@ $atividades = $_POST["atividades"];
       ?>
     </div>
   </main>
-
-  <script src="js/curriculo.js"></script>
 </body>
 </html>
