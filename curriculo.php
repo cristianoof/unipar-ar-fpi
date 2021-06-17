@@ -109,11 +109,11 @@ $atividades = $_POST["atividades"];
       <h2>Experiência Profissional</h2>
       <?php
         // Valida se os principais campos da experiência prof. estão preenchidos, caso vazios retorna a msg abaixo, caso contrário retorna os dados
-        if($empresa[0] == "" && $cargo[0] == ""){
+        if($empresa[0] == "" || $cargo[0] == "" || $entradaMes[0] == ""){
           echo ("<p>Estou a procura do primeiro emprego.</p>");
         }else {
           foreach( $empresa as $key => $n ) {
-            echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."/".$entradaAno[$key]."  a  ".$saidaMes[$key].$empregoAtual[$key].$saidaAno[$key].
+            echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."de ".$entradaAno[$key]."  a  ".$saidaMes[$key].$empregoAtual[$key].$saidaAno[$key].
             "<br>Principais atividades: ".$atividades[$key]."</p>";
           }
         }

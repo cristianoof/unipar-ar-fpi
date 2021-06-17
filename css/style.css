@@ -167,6 +167,13 @@ input[type=file], input[type=submit] {
     margin-bottom: 30px;
     padding: 15px;
 }
+
+.primeiro-emprego {
+    margin: 20px 0 10px 0;
+    font-style: italic;
+    color: #063a64;
+}
+
 /* Fim estilos Formulário */
 
 /* Estilos dos botões */

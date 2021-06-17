@@ -149,3 +149,26 @@ function validaFone(){
         fone.value = ""
     }
 }
+
+// Checkbox primeiro emprego
+function primeiroEmprego(e){
+    const empresa = document.getElementById('empresa');
+
+    if(e.checked) {
+        console.log("O cliente marcou o checkbox");
+        empresa.setAttribute("disabled", "disabled");
+    } else {
+        console.log("O cliente não marcou o checkbox");
+        empresa.removeAttribute("disabled");
+    }
+}
+    var checkbox = $("#primeiroEmprego input[type='checkbox']")
+    
+    checkbox.change(function(event) {
+        var checkbox = event.target;
+        if (checkbox.checked) {
+            console.log("teste")
+        } else {
+            alert("Unchecked")
+        }
+    });
