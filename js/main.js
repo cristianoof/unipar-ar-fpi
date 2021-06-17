@@ -150,25 +150,30 @@ function validaFone(){
     }
 }
 
-// Checkbox primeiro emprego
-function primeiroEmprego(e){
-    const empresa = document.getElementById('empresa');
+// Checkbox primeiro emprego  
+var ch = document.getElementById('chPrimeiroEmprego')
+var exp = document.getElementById('primeiroEmprego')
+var empresa = document.getElementById('empresa')
+var cargo = document.getElementById('cargo')
+var entradaMes = document.getElementById('entradaMes')
+var entradaAno = document.getElementById('entradaAno')
+var empregoAtual = document.getElementById('empregoAtual')
+var saidaMes = document.getElementById('saidaMes')
+var saidaAno = document.getElementById('saidaAno')
+var principaisAtividades = document.getElementById('principaisAtividades')
 
-    if(e.checked) {
-        console.log("O cliente marcou o checkbox");
-        empresa.setAttribute("disabled", "disabled");
-    } else {
-        console.log("O cliente não marcou o checkbox");
-        empresa.removeAttribute("disabled");
-    }
+ch.onchange = function () {
+  if (ch.checked) {
+    empresa.value = ""
+    cargo.value = ""
+    entradaMes.value = ""
+    entradaAno.value = ""
+    saidaMes.value = ""
+    saidaAno.value = ""
+    principaisAtividades.value = ""
+    exp.setAttribute("disabled", "disabled")
+  } 
+  else {
+    exp.removeAttribute("disabled")
+  }
 }
-    var checkbox = $("#primeiroEmprego input[type='checkbox']")
-    
-    checkbox.change(function(event) {
-        var checkbox = event.target;
-        if (checkbox.checked) {
-            console.log("teste")
-        } else {
-            alert("Unchecked")
-        }
-    });

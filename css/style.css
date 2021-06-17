@@ -174,6 +174,12 @@ input[type=file], input[type=submit] {
     color: #063a64;
 }
 
+#primeiroEmprego {
+    border: none;
+    background: 0;
+    margin: 0;
+    padding: 0;
+}
 /* Fim estilos Formulário */
 
 /* Estilos dos botões */

@@ -242,10 +242,10 @@
                     </div>
 
                     <div class="primeiro-emprego">
-                        <input type="checkbox" name="primeiroEmprego" id="primeiroEmprego">
+                        <input type="checkbox" name="primeiroEmprego" id="chPrimeiroEmprego">
                         <label for="primeiroEmprego">Marque se for seu primeiro emprego</label>
                     </div>
-
+                    <fieldset id="primeiroEmprego">
                     <div id="experiencia">
                         <div id="mais-experiencia">
                             <div class="formulario-2-colunas">
@@ -327,8 +327,9 @@
                         </div>
                     </div>
 
-                    <button type="button" class="btn-adicionar" onclick="clonar('#mais-experiencia', '#experiencia')">+
+                    <button type="button" class="btn-adicionar" id="addExperiencia" onclick="clonar('#mais-experiencia', '#experiencia')">+
                         Adicionar Experiência</button>
+                    </fieldset>
                 </fieldset>
 
                 <fieldset>
