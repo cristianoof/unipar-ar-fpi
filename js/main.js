@@ -1,3 +1,4 @@
+// Clona os inputs das seções que precisam desse recurso
 function clonar(elemento, clonarEm){
     const elementoOriginal = document.querySelector(elemento)
     const elementoClone = elementoOriginal.cloneNode(true)
@@ -39,6 +40,7 @@ function clonar(elemento, clonarEm){
     document.querySelector(clonarEm).appendChild(elementoClone)
 }
 
+// Mostra e esconde o conteúdo das seções de Ajuda
 function mostraConteudo(evento){
     const conteudo = document.querySelector(evento)
 
@@ -113,8 +115,8 @@ $(document).ready(function() {
             //cep sem valor, limpa formulário.
             limpa_formulário_cep()
         }
-    });
-});
+    })
+})
 
 // Preview da foto para o curriculo
 function previewImage(){
@@ -145,7 +147,7 @@ function validaFone(){
     }
     else if(fone.value.length > 11){
         alert("Corrija o Telefone Principal: \nDigite o DDD Ex: 45 e mais 9 dígitos para Celular ou \n8 dígitos para Telefone Fixo, tudo sem espaço, parenteses, traços etc")
-        document.getElementById("telefone").focus()
+        document.getElementById('telefone').focus()
         fone.value = ""
     }
 }
@@ -163,17 +165,22 @@ var saidaAno = document.getElementById('saidaAno')
 var principaisAtividades = document.getElementById('principaisAtividades')
 
 ch.onchange = function () {
-  if (ch.checked) {
-    empresa.value = ""
-    cargo.value = ""
-    entradaMes.value = ""
-    entradaAno.value = ""
-    saidaMes.value = ""
-    saidaAno.value = ""
-    principaisAtividades.value = ""
-    exp.setAttribute("disabled", "disabled")
-  } 
-  else {
-    exp.removeAttribute("disabled")
-  }
+	if (ch.checked) {
+		empresa.value = ""
+		cargo.value = ""
+		entradaMes.value = ""
+		entradaAno.value = ""
+		saidaMes.value = ""
+		saidaAno.value = ""
+		principaisAtividades.value = ""
+		exp.setAttribute("disabled", "disabled")
+		empresa.removeAttribute("required")
+		cargo.removeAttribute("required")
+	} 
+	else {
+		exp.removeAttribute("disabled")
+		empresa.setAttribute("required", "required")
+		cargo.setAttribute("required", "required")
+		document.getElementById('empresa').focus()
+	}
 }

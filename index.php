@@ -242,21 +242,21 @@
                     </div>
 
                     <div class="primeiro-emprego">
-                        <input type="checkbox" name="primeiroEmprego" id="chPrimeiroEmprego">
-                        <label for="primeiroEmprego">Marque se for seu primeiro emprego</label>
+                        <input type="checkbox" name="cbxPrimeiroEmprego" id="chPrimeiroEmprego" value="cbx">
+                        <label for="chPrimeiroEmprego">Marque se for seu primeiro emprego</label>
                     </div>
                     <fieldset id="primeiroEmprego">
                     <div id="experiencia">
                         <div id="mais-experiencia">
                             <div class="formulario-2-colunas">
                                 <label for="empresa">Empresa</label>
-                                <input type="text" name="empresa[]" id="empresa" data-form-input="1" placeholder="">
+                                <input type="text" name="empresa[]" id="empresa" data-form-input="1" required>
                             </div>
 
                             <div class="formulario-2-colunas">
                                 <label for="cargo">Cargo</label>
                                 <input type="text" name="cargo[]" id="cargo" data-form-input="2"
-                                    placeholder="Ex: Analista Financeiro">
+                                    placeholder="Ex: Analista Financeiro" required>
                             </div>
 
                             <div class="formulario-5-colunas">

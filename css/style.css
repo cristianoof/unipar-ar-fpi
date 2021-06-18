@@ -1,270 +1,269 @@
 /*Estilos da página inicial*/
 body {
-    font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 header {
-    height: 200px;
-    background: url("../images/banner.jpg") no-repeat;
-    margin-bottom: 20px;
+	height: 200px;
+	background: url("../images/banner.jpg") no-repeat;
+	margin-bottom: 20px;
 }
 
 /* conteiner */
 .container  {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 20px;
 }
 
 #logo {
-    width: 90px;
-    padding-top: 2%;
-    padding-left: 2%;
-    position: absolute;
+	width: 90px;
+	padding-top: 2%;
+	padding-left: 2%;
+	position: absolute;
 }
 
 .titulo-principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #ffffff;
 }
 
 .container h1 {
-    font-size: 3.7rem;
-    margin-top: 30px;
-    padding-bottom: 30px;
+	font-size: 3.7rem;
+	margin-top: 30px;
+	padding-bottom: 30px;
 }
 
 .container h2 {
-    font-size: 1.3rem;
-    font-weight: bold;
+	font-size: 1.3rem;
+	font-weight: bold;
 }
 
 .container h3 {
-    font-size: 1.3rem;
+	font-size: 1.3rem;
 }
 
 .conteudo img{
-    width: 35%;
-    float: right;
-    margin: 0 0 20px 20px;
+	width: 35%;
+	float: right;
+	margin: 0 0 20px 20px;
 }
 
 .conteudo p {
-    font-size: 1.1rem;
-    text-align: justify;
-    line-height: 1.5;
-    margin-top: 15px;
+	font-size: 1.1rem;
+	text-align: justify;
+	line-height: 1.5;
+	margin-top: 15px;
 }
 
 strong {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 i {
-    font-style: italic;
+	font-style: italic;
 }
 
 /* Início estilos Formulário */
 .formulario {
-    clear: right;
-    margin-top: 50px;
+	clear: right;
+	margin-top: 50px;
 }
 
 .formulario input, select, fieldset, textarea {
-    padding: 12px 25px;
-    margin: 10px 0 10px 0;
-    border-radius: 5px;
-    border: solid 1px;
-    border-color: black;
-    font-size: 1rem;
+	padding: 12px 25px;
+	margin: 10px 0 10px 0;
+	border-radius: 5px;
+	border: solid 1px;
+	border-color: black;
+	font-size: 1rem;
 }
 
 fieldset {
-    background-color: rgba(97, 97, 97, 0.1);
-    margin-top: 30px;
+	background-color: rgba(97, 97, 97, 0.1);
+	margin-top: 30px;
 }
 
 legend h2 {
-    margin-left: 10px;
+	margin-left: 10px;
 }
 
 .formulario label{
-    font-size: 1rem;
-    margin-top: 15px;
+	font-size: 1rem;
+	margin-top: 15px;
 }
 
 input[type=file], input[type=submit] {
-    border: none;
+	border: none;
 }
 
 .formulario-1-coluna {
-    display: inline-flex;
-    flex-flow: column wrap;
-    width: 99%;
-    margin: 0 0.1em;
+	display: inline-flex;
+	flex-flow: column wrap;
+	width: 99%;
+	margin: 0 0.1em;
 }
 
 .formulario-2-colunas {
-    display: inline-flex;
-    flex-flow: column wrap;
-    width: 49%;
-    margin: 0 0.1em;
+	display: inline-flex;
+	flex-flow: column wrap;
+	width: 49%;
+	margin: 0 0.1em;
 }
 
 .formulario-3-colunas {
-    display: inline-flex;
-    flex-flow: column wrap;
-    width: 32.4%;
-    margin: 0 0.1em;
+	display: inline-flex;
+	flex-flow: column wrap;
+	width: 32.4%;
+	margin: 0 0.1em;
 }
 
 .formulario-4-colunas {
-    display: inline-flex;
-    flex-flow: column wrap;
-    width: 24.1%;
-    margin: 0 0.1em;
+	display: inline-flex;
+	flex-flow: column wrap;
+	width: 24.1%;
+	margin: 0 0.1em;
 }
 
 .formulario-5-colunas {
-    display: inline-flex;
-    flex-flow: column wrap;
-    width: 19.2%;
-    margin: 0 0.1em;
+	display: inline-flex;
+	flex-flow: column wrap;
+	width: 19.2%;
+	margin: 0 0.1em;
 }
 
 .formulario-5-colunas input[type=number] {
-    display: inline-flex;
-    flex-flow: column wrap;
-    width: 74.5%;
-    margin: 10px 0.1em 10px 0.1em;
+	display: inline-flex;
+	flex-flow: column wrap;
+	width: 74.5%;
+	margin: 10px 0.1em 10px 0.1em;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .input-foto {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: top;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: top;
 }
 
 .foto-preview {
-    max-height: 250px;
-    border-radius: 5px;
-    margin-left: 30px;
+	max-height: 250px;
+	border-radius: 5px;
+	margin-left: 30px;
 }
 
 .ajuda {
-    font-size: 1rem;
-    line-height: 1.5;
-    background-color: white;
-    border-radius: 5px;
-    border: solid #C0C0C0 1px;
-    margin-bottom: 30px;
-    padding: 15px;
+	font-size: 1rem;
+	line-height: 1.5;
+	background-color: white;
+	border-radius: 5px;
+	border: solid #C0C0C0 1px;
+	margin-bottom: 30px;
+	padding: 15px;
 }
 
 .primeiro-emprego {
-    margin: 20px 0 10px 0;
-    font-style: italic;
-    color: #063a64;
+	margin: 20px 0 10px 0;
+	font-style: italic;
+	color: #063a64;
 }
 
 #primeiroEmprego {
-    border: none;
-    background: 0;
-    margin: 0;
-    padding: 0;
+	border: none;
+	background: 0;
+	margin: 0;
+	padding: 0;
 }
 /* Fim estilos Formulário */
 
 /* Estilos dos botões */
 .btn-salvar, .btn-ajuda, .btn-adicionar {
-    font-weight: bold;
-    border-radius: 5px;
-    
+	font-weight: bold;
+	border-radius: 5px;  
 }
 
 .btn-salvar, .btn-ajuda {
-    background-color: #4682B4;
-    color: white;
-    border: none;
+	background-color: #4682B4;
+	color: white;
+	border: none;
 }
 
 .btn-salvar:hover, .btn-ajuda:hover {
-    background-color: #3CB371;
-    color: white;
-    cursor: pointer;
+	background-color: #3CB371;
+	color: white;
+	cursor: pointer;
 }
 .btn-salvar {
-    font-size: 1rem;
-    height: 3.5rem;
-    width: 18rem;
+	font-size: 1rem;
+	height: 3.5rem;
+	width: 18rem;
 }
 
 .btn-ajuda {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: .9rem;
-    height: 1.8rem;
-    width: 5rem;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: .9rem;
+	height: 1.8rem;
+	width: 5rem;
 }
 
 .btn-adicionar {
-    border: solid #000000 1px;
-    color: #000000;
-    font-size: .9rem;
-    height: 1.8rem;
-    width: 12rem;
-    margin-top: 15px;
+	border: solid #000000 1px;
+	color: #000000;
+	font-size: .9rem;
+	height: 1.8rem;
+	width: 12rem;
+	margin-top: 15px;
 }
 
 .btn-adicionar:hover {
-    border: solid #3CB371 2px;
-    color: #3CB371;
-    cursor: pointer;
+	border: solid #3CB371 2px;
+	color: #3CB371;
+	cursor: pointer;
 }
 
 /* Estilos do footer */
 footer {
-    width: 100%;
-    height: 200px;
-    background-color: #b0c4de;
-    margin: 30px 0 0 0;
-    padding-top: 20px;
+	width: 100%;
+	height: 200px;
+	background-color: #b0c4de;
+	margin: 30px 0 0 0;
+	padding-top: 20px;
 }
 
 .itens-footer {
-    text-align: center;
+	text-align: center;
 }
 
 .logo-footer {
-    max-width: 95px;
-    height: auto;
-    margin-bottom: 20px;
+	max-width: 95px;
+	height: auto;
+	margin-bottom: 20px;
 }
 
 @media (min-width: 1400px){
-    .formulario label{
-        font-size: 1.1rem;
-    }
+	.formulario label{
+		font-size: 1.1rem;
+	}
 
-    .formulario-5-colunas input[type=number] {
-        width: 81.5%;
-    }
+	.formulario-5-colunas input[type=number] {
+		width: 81.5%;
+	}
 
-    .container h1 {
-        font-size: 3.9rem;
-        margin-top: 30px;
-        padding-bottom: 30px;
-    }
-    
-    .container h3 {
-        font-size: 1.5rem;
-    }
+	.container h1 {
+		font-size: 3.9rem;
+		margin-top: 30px;
+		padding-bottom: 30px;
+	}
+	
+	.container h3 {
+		font-size: 1.5rem;
+	}
     
 }
