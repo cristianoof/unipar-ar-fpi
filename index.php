@@ -20,6 +20,7 @@
             </div>
         </div>
     </header>
+
     <main class="container">
         <div class="conteudo">
             <img src="images/view-desktop.jpg" alt="Acesse pelo celular">
@@ -42,9 +43,11 @@
                 detalhada o campo <strong>Objetivo</strong> na seção 2. Sem mais delongas, vamos criar seu currículo!
             </p>
         </div>
-
+        <!-- ## Início do formulário ## -->
         <div class="formulario">
             <form action="curriculo.php" method="POST" enctype="multipart/form-data">
+
+                <!-- ## Dados Pessoais ## -->
                 <fieldset>
                     <legend>
                         <h2>1. Dados Pessoais <button type="button" class="btn-ajuda"
@@ -154,6 +157,7 @@
                     <img class="foto-preview" id="foto-preview">
                 </fieldset>
 
+                <!-- ## Seção Objetivo ## -->
                 <fieldset>
                     <legend>
                         <h2>2. Objetivo <button type="button" class="btn-ajuda"
@@ -172,6 +176,7 @@
                     </div>
                 </fieldset>
 
+                <!-- ## Seção Formação Acadêmica ## -->
                 <fieldset>
                     <legend>
                         <h2>3. Formação Acadêmica <button type="button" class="btn-ajuda"
@@ -227,6 +232,7 @@
                         Adicionar Formação</button>
                 </fieldset>
 
+                <!-- ## Seção Experiência Profissional ## -->
                 <fieldset>
                     <legend>
                         <h2>4. Experiência Profissional <button type="button" class="btn-ajuda"
@@ -287,7 +293,7 @@
 
                             <div class="formulario-5-colunas">
                                 <label for="empregoAtual">É seu Emprego Atual?</label>
-                                <select name="empregoAtual[]" id="empregoAtual" data-select>
+                                <select name="empregoAtual[]" id="empregoAtual" onchange="selectEmpAtual()">
                                     <option value="de " selected>Nâo</option>
                                     <option value="Emprego Atual">Sim</option>
                                 </select>
@@ -332,6 +338,7 @@
                     </fieldset>
                 </fieldset>
 
+                <!-- ## Outros Cursos e Habilidades ## -->
                 <fieldset>
                     <legend>
                         <h2>5. Outros Cursos e Habilidades <button type="button" class="btn-ajuda"
@@ -357,6 +364,7 @@
                 </fieldset>
                 <input class="btn-salvar" type="submit" value="Gerar meu Currículo">
             </form>
+            <!-- ## Fim do formulário ## -->
         </div>
     </main>
 
@@ -372,5 +380,4 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -2,6 +2,7 @@
 // Formatação do CEP
 $cep = substr($_POST["cep"], 0, -3)."-". substr($_POST["cep"], -3);
 
+
 // Formatação dos Telefones
 $remover = array("-", "(", ")", " ", ",", ".", "*");
 $fone = str_replace($remover, "", $_POST["telefone"]);
@@ -25,6 +26,7 @@ if($_POST["telefoneRecado"] == ""){
 	}
 }
 
+
 // Carrega e salva a Foto na pasta uploads
 $extensao = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);
 $dirUploads = "uploads";
@@ -42,6 +44,7 @@ if(!($extensao == "jpg" OR $extensao == "png" OR $extensao == "jpeg")){
 	$source = "";
 }
 
+
 // Variáveis formação
 $cursoFormacao = $_POST["cursoFormacao"];
 $instituicao = $_POST["instituicao"];
@@ -49,7 +52,6 @@ $conclusao = $_POST["conclusao"];
 $anoFormacao = $_POST["anoFormacao"];
 
 // Variáveis experiência
-
 if(!(isset($_POST["cbxPrimeiroEmprego"]))){
 	$empresa = $_POST["empresa"];
 	$cargo = $_POST["cargo"];
@@ -83,54 +85,62 @@ if(!(isset($_POST["cbxPrimeiroEmprego"]))){
 
 	<main class="container">
 		<div>
-		<img <?=$source?> alt="">
-		<h1><?= $_POST["nomeCompleto"]?></h1>
-		<p><?= $_POST["estadoCivil"]?>, <?= $_POST["nacionalidade"]?>, <?= $_POST["idade"]?> anos</p>
-		<p>Sexo: <?= $_POST["sexo"]?>, Filhos: <?= $_POST["filhos"]?></p>
-		<p><?= $_POST["rua"]?> - <?= $_POST["bairro"]?></p>
-		<p>CEP: <?= $cep?> | <?= $_POST["cidade"]?> - <?= $_POST["uf"]?></p>
-		<p>Telefone: <?= $fone?></p>
-		<?= $foneRecado?>
-		<p>E-mail: <?= $_POST["email"]?></p>
-		<hr>
+			<img <?=$source?> alt="">
+			<h1><?= $_POST["nomeCompleto"]?></h1>
+			<p><?= $_POST["estadoCivil"]?>, <?= $_POST["nacionalidade"]?>, <?= $_POST["idade"]?> anos</p>
+			<p>Sexo: <?= $_POST["sexo"]?>, Filhos: <?= $_POST["filhos"]?></p>
+			<p><?= $_POST["rua"]?> - <?= $_POST["bairro"]?></p>
+			<p>CEP: <?= $cep?> | <?= $_POST["cidade"]?> - <?= $_POST["uf"]?></p>
+			<p>Telefone: <?= $fone?></p>
+			<?= $foneRecado?>
+			<p>E-mail: <?= $_POST["email"]?></p>
+			<hr>
 		</div>
 
 		<div>
-		<h2>Objetivo</h2>
-		<p><?= $_POST["objetivo"]?></p>
+			<h2>Objetivo</h2>
+			<p><?= $_POST["objetivo"]?></p>
 		</div>
 
 		<div class="paragrafo">
-		<h2>Formação Acadêmica</h2>
-		<?php
-			foreach( $cursoFormacao as $key => $n ) {
-				echo "<p>Curso: ".$n."<br>Istituição: ".$instituicao[$key]."<br>".$conclusao[$key]." ".$anoFormacao[$key]."</p>";
-			}
-		?>
-		</div>
-
-		<div class="paragrafo">
-		<h2>Experiência Profissional</h2>
-		<?php
-			// Valida se o checkbox primeiro emprego está marcado e se os 3 primeiros inputs estão preenchidos
-			if(isset($_POST['cbxPrimeiroEmprego']) || $empresa[0] == "" || $cargo[0] == "" || $entradaMes[0] == ""){
-				echo ("<p>Estou a procura do primeiro emprego.</p>");
-			}else {
-				foreach( $empresa as $key => $n ) {
-				echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."de ".$entradaAno[$key]."  a  ".$saidaMes[$key].$empregoAtual[$key].$saidaAno[$key].
-				"<br>Principais atividades: ".$atividades[$key]."</p>";
+			<h2>Formação Acadêmica</h2>
+			<?php
+				foreach( $cursoFormacao as $key => $n ) {
+					echo "<p>Curso: ".$n."<br>Istituição: ".$instituicao[$key]."<br>".$conclusao[$key]." ".$anoFormacao[$key]."</p>";
 				}
-			}
-		?>
+			?>
+		</div>
+
+		<div class="paragrafo">
+			<h2>Experiência Profissional</h2>
+			<?php
+				// Valida se o checkbox primeiro emprego está marcado e se os 3 primeiros inputs estão preenchidos
+				if(isset($_POST['cbxPrimeiroEmprego']) || $empresa[0] == "" || $cargo[0] == "" || $entradaMes[0] == ""){
+					echo ("<p>Estou a procura do primeiro emprego.</p>");
+				}
+				else {
+					foreach( $empresa as $key => $n ) {
+						if(isset($saidaMes[$key]) || isset($saidaAno[$key])){
+							echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."de ".$entradaAno[$key]."  a  ".$saidaMes[$key].$empregoAtual[$key].$saidaAno[$key].
+							"<br>Principais atividades: ".$atividades[$key]."</p>";
+						}
+						else {
+							echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."de ".$entradaAno[$key]."  a  ".$empregoAtual[$key].
+							"<br>Principais atividades: ".$atividades[$key]."</p>";
+						}
+						
+					}
+				}
+			?>
 		</div>
 
 		<div>
-		<h2>Outros Cursos e Habilidades</h2>
-		<?php
-			foreach($_POST["maisCursos"] as $cursos){
-				echo "<p>$cursos</p>";
-			}
-		?>
+			<h2>Outros Cursos e Habilidades</h2>
+			<?php
+				foreach($_POST["maisCursos"] as $cursos){
+					echo "<p>$cursos</p>";
+				}
+			?>
 		</div>
 	</main>
 </body>

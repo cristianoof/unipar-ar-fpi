@@ -247,6 +247,7 @@ footer {
 	margin-bottom: 20px;
 }
 
+/* Somente alguns ajustes ref ao tamanho de tela */
 @media (min-width: 1400px){
 	.formulario label{
 		font-size: 1.1rem;
@@ -265,5 +266,4 @@ footer {
 	.container h3 {
 		font-size: 1.5rem;
 	}
-    
 }

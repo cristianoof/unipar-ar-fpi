@@ -34,6 +34,9 @@ function clonar(elemento, clonarEm){
         limpa5.value = ""
         limpa6.value = ""
         limpa7.value = ""
+
+        limpa5.removeAttribute("disabled")
+        limpa6.removeAttribute("disabled")
     }
 
     // Local pra inserir o elemento na paǵina
@@ -101,7 +104,7 @@ $(document).ready(function() {
                         limpa_formulário_cep()
                         alert("CEP não encontrado.")
                     }
-                });
+                })
             } //end if.
             else {
                 //cep é inválido.
@@ -183,4 +186,22 @@ ch.onchange = function () {
 		cargo.setAttribute("required", "required")
 		document.getElementById('empresa').focus()
 	}
+}
+
+// Seleção de Emprego Atual, sim e não
+function selectEmpAtual(){
+    var empAtual = document.querySelectorAll('#empregoAtual')
+    var saidaMes = document.querySelectorAll('#saidaMes')
+    var saidaAno = document.querySelectorAll('#saidaAno')
+
+    empAtual.forEach(function (empAtual, i) {
+        if(empAtual.value == "Emprego Atual"){
+            saidaMes[i].setAttribute("disabled", "disabled")
+            saidaAno[i].setAttribute("disabled", "disabled")
+        }
+        else {
+            saidaMes[i].removeAttribute("disabled")
+            saidaAno[i].removeAttribute("disabled")
+        } 
+    })
 }
