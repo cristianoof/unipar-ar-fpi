@@ -1,0 +1,127 @@
+img {
+   display: block;
+   max-width: 100%;
+}
+
+.image-original {
+   max-width: 550px;
+   max-height: 600px;
+}
+
+.janela-modal {
+   position: relative;
+   background: white;
+   width: 80%;
+   min-width: 280px;
+   height: auto;
+   padding: 15px;
+   animation: modal .5s;
+}
+
+.container-modal {
+   position: fixed;
+   background: rgba(0, 0, 0, .5);
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: 2000;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   overflow: scroll;
+}
+
+.conteudo-modal {
+   display: flex;
+   max-width: max-content;
+}
+
+.preview {
+   overflow: hidden;
+   position: absolute;
+   width: 220px;
+   height: 220px;
+   border: 1px solid red;
+   top: 20px;
+   right: 20px;
+}
+
+.btn-fechar-modal {
+   position: absolute;
+   right: -10px;
+   top: -10px;
+   border: solid 2px;
+   border-radius: 50%;
+   width: 30px;
+   height: 30px;
+   background: tomato;
+   color: white;
+   cursor: pointer;
+}
+
+.btns {
+   position: absolute;
+   top: 250px;
+   right: 20px;
+}
+
+.btn-crop,
+.btn-cancelar {
+   font-weight: bold;
+   border-radius: 5px;
+   font-size: var(--tamanho-fonte-P);
+   padding: 10px;
+}
+
+.btn-crop {
+   background-color: #4682B4;
+   color: white;
+   border: none;
+}
+
+.btn-cancelar {
+   background-color: #494949;
+   color: white;
+   border: none;
+}
+
+.btn-crop:hover {
+   background-color: #3CB371;
+   color: white;
+   cursor: pointer;
+}
+
+.btn-cancelar:hover {
+   background-color: brown;
+   color: white;
+   cursor: pointer;
+}
+
+@keyframes modal {
+   from {
+      opacity: 0;
+      transform: translate(0, -70px);
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@media (max-width: 580px) {
+   .janela-modal {
+      width: 95%;
+      min-height: 600px;
+   }
+   .preview {
+      width: 170px;
+      height: 170px;
+      bottom: 20px;
+      top: unset;
+   }
+   .btns {
+      left: 20px;
+      bottom: 20px;
+      top: unset;
+   }
+}

@@ -1,269 +1,435 @@
 /*Estilos da página inicial*/
+
+
+/* reset básico */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+}
+
+:root {
+   --tamanho-fonte-G: clamp(0.8rem, 2vw, 1.4rem);
+   --tamanho-fonte-M: clamp(0.8rem, 2vw, 1.1rem);
+   --tamanho-fonte-P: clamp(0.8rem, 2vw, 1rem);
+}
+
 body {
-	font-family: 'Poppins', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 header {
-	height: 200px;
-	background: url("../images/banner.jpg") no-repeat;
-	margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 200px;
+   background: url("../images/banner.jpg") no-repeat;
+   margin-bottom: 20px;
 }
 
-/* conteiner */
-.container  {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0 20px;
-}
-
-#logo {
-	width: 90px;
-	padding-top: 2%;
-	padding-left: 2%;
-	position: absolute;
+.logo {
+   margin-left: 10%;
+   max-width: 100px;
 }
 
 .titulo-principal {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: #ffffff;
+   text-align: center;
+   margin: auto;
+   color: #ffffff;
+   font-size: var(--tamanho-fonte-G);
 }
 
-.container h1 {
-	font-size: 3.7rem;
-	margin-top: 30px;
-	padding-bottom: 30px;
+.titulo-principal h3 {
+   font-weight: normal;
+}
+
+.ajuste {
+   width: 100px;
+   margin-right: 10%;
+}
+
+
+/* conteiner */
+
+.container {
+   width: 80%;
+   margin: auto;
+   padding: 5px;
 }
 
 .container h2 {
-	font-size: 1.3rem;
-	font-weight: bold;
-}
-
-.container h3 {
-	font-size: 1.3rem;
-}
-
-.conteudo img{
-	width: 35%;
-	float: right;
-	margin: 0 0 20px 20px;
+   font-size: var(--tamanho-fonte-G);
 }
 
 .conteudo p {
-	font-size: 1.1rem;
-	text-align: justify;
-	line-height: 1.5;
-	margin-top: 15px;
+   font-size: var(--tamanho-fonte-M);
+   text-align: justify;
+   line-height: 1.7;
+}
+
+#img-desktop {
+   width: 30%;
+   min-width: 300px;
+   float: right;
+   margin: 0 0 20px 20px;
+}
+
+#img-mobile {
+   display: none;
 }
 
 strong {
-	font-weight: bold;
+   font-weight: bold;
 }
 
 i {
-	font-style: italic;
+   font-style: italic;
 }
+
+#ver-mais,
+#btn-ver-mais,
+#btn-ver-menos {
+   display: none;
+}
+
+#btn-ver-mais,
+#btn-ver-menos {
+   text-decoration: none;
+   color: #4682B4;
+   font-weight: bold;
+   border: solid 1px;
+   border-radius: 5px;
+   padding-left: 5px;
+}
+
 
 /* Início estilos Formulário */
-.formulario {
-	clear: right;
-	margin-top: 50px;
-}
 
-.formulario input, select, fieldset, textarea {
-	padding: 12px 25px;
-	margin: 10px 0 10px 0;
-	border-radius: 5px;
-	border: solid 1px;
-	border-color: black;
-	font-size: 1rem;
-}
-
-fieldset {
-	background-color: rgba(97, 97, 97, 0.1);
-	margin-top: 30px;
-}
-
-legend h2 {
-	margin-left: 10px;
-}
-
-.formulario label{
-	font-size: 1rem;
-	margin-top: 15px;
-}
-
-input[type=file], input[type=submit] {
-	border: none;
+form {
+   clear: right;
+   margin: auto;
 }
 
 .formulario-1-coluna {
-	display: inline-flex;
-	flex-flow: column wrap;
-	width: 99%;
-	margin: 0 0.1em;
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 10px;
+   margin-top: 10px;
 }
 
 .formulario-2-colunas {
-	display: inline-flex;
-	flex-flow: column wrap;
-	width: 49%;
-	margin: 0 0.1em;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 10px;
+   margin-top: 10px;
 }
 
 .formulario-3-colunas {
-	display: inline-flex;
-	flex-flow: column wrap;
-	width: 32.4%;
-	margin: 0 0.1em;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 10px;
+   margin-top: 10px;
 }
 
 .formulario-4-colunas {
-	display: inline-flex;
-	flex-flow: column wrap;
-	width: 24.1%;
-	margin: 0 0.1em;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 10px;
+   margin-top: 10px;
 }
 
 .formulario-5-colunas {
-	display: inline-flex;
-	flex-flow: column wrap;
-	width: 19.2%;
-	margin: 0 0.1em;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 10px;
+   margin-top: 10px;
 }
 
-.formulario-5-colunas input[type=number] {
-	display: inline-flex;
-	flex-flow: column wrap;
-	width: 74.5%;
-	margin: 10px 0.1em 10px 0.1em;
+fieldset {
+   position: relative;
+   background-color: rgba(97, 97, 97, 0.1);
+   margin: 30px 0 20px 0;
+   padding: 12px 25px;
+   border-radius: 5px;
+   border: solid 1px black;
+   font-size: 1rem;
+}
+
+legend h2 {
+   margin-left: 10px;
+}
+
+label {
+   display: inline-block;
+   font-size: var(--tamanho-fonte-P);
+   margin: 12px 0 8px 0;
+}
+
+input,
+select {
+   width: 100%;
+   padding: 12px 25px;
+   border-radius: 5px;
+   border: solid 1px black;
+   font-size: 1rem;
+}
+
+textarea {
+   padding: 12px 25px;
+   border-radius: 5px;
+   border: solid 1px black;
+   font-size: 1rem;
 }
 
 .hide {
-	display: none;
-}
-
-.input-foto {
-	display: flex;
-	flex-flow: column wrap;
-	align-items: top;
-}
-
-.foto-preview {
-	max-height: 250px;
-	border-radius: 5px;
-	margin-left: 30px;
+   display: none;
 }
 
 .ajuda {
-	font-size: 1rem;
-	line-height: 1.5;
-	background-color: white;
-	border-radius: 5px;
-	border: solid #C0C0C0 1px;
-	margin-bottom: 30px;
-	padding: 15px;
+   font-size: var(--tamanho-fonte-P);
+   color: #494949;
+   line-height: 1.5;
+   background-color: white;
+   border-radius: 5px;
+   border: solid #C0C0C0 1px;
+   margin-bottom: 30px;
+   padding: 15px;
+}
+
+.rede-social img {
+   position: absolute;
+   width: 45px;
+}
+
+.rede-social input {
+   padding-left: 50px;
+}
+
+.foto-perfil {
+   width: 300px;
+   margin-top: 15px;
+}
+
+#chPrimeiroEmprego {
+   width: 20px;
 }
 
 .primeiro-emprego {
-	margin: 20px 0 10px 0;
-	font-style: italic;
-	color: #063a64;
+   font-style: italic;
+   color: #063a64;
 }
 
 #primeiroEmprego {
-	border: none;
-	background: 0;
-	margin: 0;
-	padding: 0;
+   border: none;
+   background: 0;
+   margin: 0;
+   padding: 0;
 }
-/* Fim estilos Formulário */
+
+input[type=submit] {
+   border: none;
+}
+
+.informacao-btn label {
+   display: inline;
+   margin-left: 15px;
+}
+
 
 /* Estilos dos botões */
-.btn-salvar, .btn-ajuda, .btn-adicionar {
-	font-weight: bold;
-	border-radius: 5px;  
+
+.btn-rede-social {
+   margin-top: 20px;
 }
 
-.btn-salvar, .btn-ajuda {
-	background-color: #4682B4;
-	color: white;
-	border: none;
+.btn-salvar,
+.btn-ajuda,
+.btn-adicionar,
+.btn-selecionar-foto,
+.btn-rede-social {
+   font-weight: bold;
+   border-radius: 5px;
 }
 
-.btn-salvar:hover, .btn-ajuda:hover {
-	background-color: #3CB371;
-	color: white;
-	cursor: pointer;
+.btn-salvar,
+.btn-ajuda,
+.btn-selecionar-foto,
+.btn-rede-social {
+   background-color: #4682B4;
+   color: white;
+   border: none;
 }
+
+.btn-salvar:hover,
+.btn-ajuda:hover,
+.btn-selecionar-foto:hover,
+.btn-rede-social:hover {
+   background-color: #3CB371;
+   color: white;
+   cursor: pointer;
+}
+
 .btn-salvar {
-	font-size: 1rem;
-	height: 3.5rem;
-	width: 18rem;
+   font-size: 1rem;
+   height: 3.5rem;
+   width: 18rem;
 }
 
 .btn-ajuda {
-	margin-left: 10px;
-	margin-right: 10px;
-	font-size: .9rem;
-	height: 1.8rem;
-	width: 5rem;
+   margin: 0 5px 0 5px;
+   font-size: var(--tamanho-fonte-P);
+   height: clamp(1.5rem, 2.5vw, 1.8rem);
+   width: clamp(4rem, 4vw, 5rem);
+}
+
+.btn-selecionar-foto,
+.btn-rede-social {
+   font-size: var(--tamanho-fonte-P);
+   padding: 10px;
+   width: 180px;
 }
 
 .btn-adicionar {
-	border: solid #000000 1px;
-	color: #000000;
-	font-size: .9rem;
-	height: 1.8rem;
-	width: 12rem;
-	margin-top: 15px;
+   border: solid #000000 1px;
+   color: #000000;
+   font-size: .9rem;
+   height: 1.8rem;
+   width: 12rem;
+   margin-top: 15px;
 }
 
 .btn-adicionar:hover {
-	border: solid #3CB371 2px;
-	color: #3CB371;
-	cursor: pointer;
+   border: solid #3CB371 2px;
+   color: #3CB371;
+   cursor: pointer;
 }
+
+.form-contato {
+   margin-top: 70px;
+}
+
+.form-contato fieldset {
+   border: none;
+   padding: 0;
+   background: none;
+}
+
+.form-contato legend h2 {
+   margin: 0;
+   margin-bottom: 10px;
+}
+
+.msg-sucesso {
+   display: none;
+   justify-content: center;
+   align-items: center;
+   background: #3CB371;
+   height: 60px;
+   margin-top: 20px;
+   color: white;
+   font-weight: bold;
+}
+
 
 /* Estilos do footer */
-footer {
-	width: 100%;
-	height: 200px;
-	background-color: #b0c4de;
-	margin: 30px 0 0 0;
-	padding-top: 20px;
-}
 
-.itens-footer {
-	text-align: center;
+footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   height: 220px;
+   margin: 20px 0 0 0;
+   padding-top: 20px;
+   background-color: #b0c4de;
 }
 
 .logo-footer {
-	max-width: 95px;
-	height: auto;
-	margin-bottom: 20px;
+   max-width: 80px;
+   margin: auto;
+   margin-bottom: 20px;
 }
 
-/* Somente alguns ajustes ref ao tamanho de tela */
-@media (min-width: 1400px){
-	.formulario label{
-		font-size: 1.1rem;
-	}
+.copyright {
+   font-size: var(--tamanho-fonte-P);
+}
 
-	.formulario-5-colunas input[type=number] {
-		width: 81.5%;
-	}
 
-	.container h1 {
-		font-size: 3.9rem;
-		margin-top: 30px;
-		padding-bottom: 30px;
-	}
-	
-	.container h3 {
-		font-size: 1.5rem;
-	}
+/* Configurções Media Queries */
+
+@media (max-width: 1000px) {
+   .formulario-4-colunas,
+   .formulario-5-colunas {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (max-width: 780px) {
+   header {
+      flex-flow: column;
+      height: auto;
+      padding: 10px;
+   }
+   .logo {
+      max-width: 60px;
+   }
+   .logo,
+   .titulo-principal {
+      margin: 0;
+   }
+   .container {
+      width: 100%;
+   }
+   .conteudo {
+      margin: 0 10px 0 10px;
+   }
+   form {
+      max-width: 95%;
+   }
+   .formulario-3-colunas,
+   .formulario-4-colunas,
+   .formulario-5-colunas {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+
+/* trocar a imagem do conteúdo no mobile? */
+
+@media (max-width: 580px) {
+   #img-desktop {
+      display: none;
+   }
+   #img-mobile {
+      display: initial;
+      width: 50%;
+      float: right;
+      margin: 0 0 20px 20px;
+   }
+   #ver-mais,
+   #btn-ver-mais {
+      display: inline;
+   }
+   #ver-menos {
+      display: none;
+   }
+   #btn-ver-mais::after {
+      content: "▼";
+   }
+   #btn-ver-menos::after {
+      content: "▲";
+   }
+   .formulario-2-colunas,
+   .formulario-3-colunas,
+   .formulario-4-colunas,
+   .formulario-5-colunas {
+      grid-template-columns: 1fr;
+   }
+   .btn-salvar {
+      display: block;
+      margin: auto;
+   }
 }

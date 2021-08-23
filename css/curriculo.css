@@ -1,3 +1,13 @@
+/* reset básico */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+}
+
 body {
    font-family: Arial, Helvetica, sans-serif;
 }
@@ -36,7 +46,7 @@ body {
    border: none;
    height: 3.5rem;
    width: 18rem;
-   margin: 15px;   
+   margin: 15px;
 }
 
 .btn-imprimir:hover {
@@ -50,11 +60,10 @@ body {
    margin: 50px auto;
 }
 
-img {
+.dados-pessoais img {
    float: right;
    margin-left: 50px;
    max-width: 40mm;
-   max-height: 50mm;
 }
 
 h1 {
@@ -70,13 +79,13 @@ h2 {
 }
 
 p {
-   font-size: 12pt;
+   font-size: 11pt;
    margin-bottom: 7px;
 }
 
 hr {
    border: gray 1px solid;
-   margin-top: 40px;
+   margin-top: 10px;
 }
 
 .paragrafo p {
@@ -84,9 +93,31 @@ hr {
    line-height: 1.5;
 }
 
-@media print { 
-   .nao-imprime { 
-      display: none; 
+.redes-sociais {
+   display: flex;
+   flex-direction: column;
+}
+
+.rede-social {
+   display: flex;
+   align-items: center;
+   margin-bottom: 5px;
+}
+
+.rede-social img {
+   clear: right;
+   width: 7mm;
+}
+
+.rede-social p {
+   display: inline-block;
+   margin-left: 10px;
+   margin-bottom: 0;
+}
+
+@media print {
+   .nao-imprime {
+      display: none;
    }
    .container {
       width: 90%;

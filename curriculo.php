@@ -1,7 +1,10 @@
 <?php
+if(!(isset($_POST["criar-curriculo"]))){
+	header('Location: /unipar/unipar-ar-fpi/index.php');
+}
+
 // Formatação do CEP
 $cep = substr($_POST["cep"], 0, -3)."-". substr($_POST["cep"], -3);
-
 
 // Formatação dos Telefones
 $remover = array("-", "(", ")", " ", ",", ".", "*");
@@ -26,30 +29,25 @@ if($_POST["telefoneRecado"] == ""){
 	}
 }
 
+// Redes Sociais
+$redeSocial = $_POST["redes-sociais"];
 
-// Carrega e salva a Foto na pasta uploads
-$extensao = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);
-$dirUploads = "uploads";
-$temporario = $_FILES["foto"]["tmp_name"];
-$image = "foto.jpg";
+// Carrega a Foto
+$dirUploads = "upload";
+$image = $_POST["input-foto-crop"];
 
-if($temporario != ""){
-	move_uploaded_file($temporario, $dirUploads. DIRECTORY_SEPARATOR . $image);
+if($image != ""){
 	$source = 'src="'.$dirUploads. DIRECTORY_SEPARATOR . $image.'"';
 }else{
 	$source = "";
 }
-// Verifica se a extensão do arquivo é algum dos 3 formatos de imagem abaixo
-if(!($extensao == "jpg" OR $extensao == "png" OR $extensao == "jpeg")){
-	$source = "";
-}
-
 
 // Variáveis formação
 $cursoFormacao = $_POST["cursoFormacao"];
 $instituicao = $_POST["instituicao"];
 $conclusao = $_POST["conclusao"];
 $anoFormacao = $_POST["anoFormacao"];
+
 
 // Variáveis experiência
 if(!(isset($_POST["cbxPrimeiroEmprego"]))){
@@ -70,8 +68,8 @@ if(!(isset($_POST["cbxPrimeiroEmprego"]))){
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Aqui está seu Currículo</title>
-	<link rel="stylesheet" href="css/reset.css">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<title>Currículo <?= $_POST["nomeCompleto"]?></title>
 	<link rel="stylesheet" href="css/curriculo.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
 </head>
@@ -84,8 +82,8 @@ if(!(isset($_POST["cbxPrimeiroEmprego"]))){
 	</header>
 
 	<main class="container">
-		<div>
-			<img <?=$source?> alt="">
+		<div class="dados-pessoais">
+			<img <?=$source?>>
 			<h1><?= $_POST["nomeCompleto"]?></h1>
 			<p><?= $_POST["estadoCivil"]?>, <?= $_POST["nacionalidade"]?>, <?= $_POST["idade"]?> anos</p>
 			<p>Sexo: <?= $_POST["sexo"]?>, Filhos: <?= $_POST["filhos"]?></p>
@@ -94,8 +92,20 @@ if(!(isset($_POST["cbxPrimeiroEmprego"]))){
 			<p>Telefone: <?= $fone?></p>
 			<?= $foneRecado?>
 			<p>E-mail: <?= $_POST["email"]?></p>
-			<hr>
 		</div>
+		<div class="redes-sociais">
+			<?php
+				foreach($redeSocial as $key => $n){
+					if($n != ""){
+						echo "<div class='rede-social'><img src='images/$key.png'><p>".$n."</p></div>";
+					}
+					else{
+						$redeSocial = "";
+					}
+				}
+			?>
+		</div>
+		<hr>
 
 		<div>
 			<h2>Objetivo</h2>
@@ -120,15 +130,7 @@ if(!(isset($_POST["cbxPrimeiroEmprego"]))){
 				}
 				else {
 					foreach( $empresa as $key => $n ) {
-						if(isset($saidaMes[$key]) || isset($saidaAno[$key])){
-							echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."de ".$entradaAno[$key]."  a  ".$saidaMes[$key].$empregoAtual[$key].$saidaAno[$key].
-							"<br>Principais atividades: ".$atividades[$key]."</p>";
-						}
-						else {
-							echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."de ".$entradaAno[$key]."  a  ".$empregoAtual[$key].
-							"<br>Principais atividades: ".$atividades[$key]."</p>";
-						}
-						
+						echo "<p>Empresa: ".$n." | Cargo: ".$cargo[$key]."<br>Período de: ".$entradaMes[$key]."de ".$entradaAno[$key]."  a  ".$saidaMes[$key].$saidaAno[$key]."<br>Principais atividades: ".$atividades[$key]."</p>";
 					}
 				}
 			?>
