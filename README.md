@@ -3,7 +3,7 @@ Projeto Atividade Reflexiva da disciplina de Fundamentos de Programação para I
 
 ## Objetivo
 Desenvolver uma aplicação Web para Gerar Currículos utilizando as 4 linguagens vistas em aula:
-1 - *HTML*
-2 - *css*
-3 - *JAVASCRIPT*
-4 - *PHP*
+1. *HTML*
+2. *CSS*
+3. *JAVASCRIPT*
+4. *PHP*
